@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2006342140212020779}
   - component: {fileID: 3932685120675082523}
-  - component: {fileID: 5409591525579092163}
   - component: {fileID: 2120753388377365152}
+  - component: {fileID: 5409591525579092163}
+  - component: {fileID: -264749664124665557}
   m_Layer: 6
   m_Name: WallBreak
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -6535806010127615939, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,27 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5409591525579092163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3723379690726331466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4fe101bdbd2f0419367f21765e917a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationTime: 0.5
-  idleSprite: {fileID: -6535806010127615939, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
-  animationSprites:
-  - {fileID: -6535806010127615939, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
-  - {fileID: -3023184425221478555, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
-  - {fileID: 718396806123956307, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
-  - {fileID: 8946755604140867079, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
-  loop: 0
-  idle: 1
 --- !u!61 &2120753388377365152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,3 +111,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5409591525579092163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723379690726331466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4fe101bdbd2f0419367f21765e917a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.5
+  idleSprite: {fileID: -6535806010127615939, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
+  animationSprites:
+  - {fileID: -6535806010127615939, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
+  - {fileID: -3023184425221478555, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
+  - {fileID: 718396806123956307, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
+  - {fileID: 8946755604140867079, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
+  loop: 0
+  idle: 1
+--- !u!114 &-264749664124665557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723379690726331466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b32fb47dbdc244ca26bfc3ec26b4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabs:
+  - {fileID: 3017812053524760547, guid: 986808168450a5f46a689554ef84fa29, type: 3}
+  - {fileID: 3675307638618780807, guid: 24117fe0695eea04d9352e7f8decd671, type: 3}
+  - {fileID: 2175713969743475494, guid: a4fdea799d2c8d941ba3d248edd6adb5, type: 3}

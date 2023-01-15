@@ -2250,7 +2250,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5207544987158716770, guid: 0a717420a44751749bcdf078de0ec0ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2354,7 +2354,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  explosionRadius: 2
+  explosionRadius: 1
   explosionDuration: 1
   destructiblesPrefabs: {fileID: 3723379690726331466, guid: ad4a0225442160d4fa35d8fb7833096d, type: 3}
   destructiblesTiles: {fileID: 2035417107}
