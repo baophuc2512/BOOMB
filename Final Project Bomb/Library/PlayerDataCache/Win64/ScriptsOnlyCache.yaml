@@ -39,8 +39,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -77,33 +75,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1630}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1754}
+      Script: {instanceID: 1726}
     - Class: 114
-      Script: {instanceID: 2366}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3436}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3546}
     - Class: 114
-      Script: {instanceID: 4078}
+      Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4420}
+      Script: {instanceID: 4392}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 4620}
     - Class: 114
-      Script: {instanceID: 4856}
+      Script: {instanceID: 4828}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5376}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -138,25 +136,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1630}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 2366}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3280}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3546}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5376}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 5692}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,39 +195,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1630}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 2262}
+      Script: {instanceID: 2234}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2950}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 3360}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3526}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 3760}
+      Script: {instanceID: 3732}
     - Class: 114
-      Script: {instanceID: 3824}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 4058}
+      Script: {instanceID: 4030}
     - Class: 114
-      Script: {instanceID: 4136}
+      Script: {instanceID: 4108}
     - Class: 114
-      Script: {instanceID: 4324}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4778}
+      Script: {instanceID: 4750}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 5458}
     - Class: 114
-      Script: {instanceID: 5706}
+      Script: {instanceID: 5678}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -274,31 +272,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1630}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1948}
+      Script: {instanceID: 1920}
     - Class: 114
-      Script: {instanceID: 2358}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2792}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3546}
     - Class: 114
-      Script: {instanceID: 3674}
+      Script: {instanceID: 3646}
     - Class: 114
-      Script: {instanceID: 3824}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 4994}
+      Script: {instanceID: 4966}
     - Class: 114
-      Script: {instanceID: 5392}
+      Script: {instanceID: 5364}
     - Class: 114
-      Script: {instanceID: 5832}
+      Script: {instanceID: 5804}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -952,4 +950,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SceneHome.unity
   - Assets/Scenes/SceneInGame.unity
   - Assets/Scenes/Home-Setting.unity
-  playerPath: "D:/Game Te\u0301t/Final Project Bomb.exe"
+  playerPath: C:/Users/Mahir/OneDrive/Documents/Boom/Final Project Bomb.exe
