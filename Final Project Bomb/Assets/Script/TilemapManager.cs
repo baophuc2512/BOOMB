@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -79,7 +81,7 @@ public class TilemapManager : MonoBehaviour
     }
 }
 
-#if UNITY_EDITOR
+
 
 public static class ScriptableObjectUtility
 {

@@ -1898,8 +1898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   deadDuration: 2
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 10
+  currentHealth: 10
   modeBatTu: 0
   inputUp: 119
   inputDown: 115
