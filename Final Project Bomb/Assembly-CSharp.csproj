@@ -80,6 +80,8 @@
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\LoadingScene.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
+    <Compile Include="Assets\Script\Minh\PauseGame.cs" />
+    <Compile Include="Assets\Script\Minh\RestartFix.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

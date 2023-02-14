@@ -5,17 +5,28 @@ using UnityEngine;
 public class PanelOpener : MonoBehaviour
 {
     public GameObject Panel;
+    bool opened = false;
     public void OpenPanel()
     {
-        if (Panel !=null)
+        if (Panel !=null && opened ==false)
         {
             bool isActive = Panel.activeSelf;
 
             Panel.SetActive(true);
+            opened = true;
+        }
+        else if (opened==true
+            
+            )
+        {
+            Panel.SetActive(false);
+            opened = false;
         }
     }
     public void ClosePanel()
     {
-        Panel.transform.gameObject.SetActive(false);
+        
+            Panel.transform.gameObject.SetActive(false);
+        opened = false;
     }
 }
