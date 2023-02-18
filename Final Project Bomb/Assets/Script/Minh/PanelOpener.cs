@@ -29,4 +29,5 @@ public class PanelOpener : MonoBehaviour
             Panel.transform.gameObject.SetActive(false);
         opened = false;
     }
+    
 }

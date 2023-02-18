@@ -2785,7 +2785,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1644423836}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
-        m_MethodName: Pausegame
+        m_MethodName: PauseAndResumegame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3620,6 +3620,7 @@ GameObject:
   - component: {fileID: 1644423835}
   - component: {fileID: 1644423836}
   - component: {fileID: 1644423837}
+  - component: {fileID: 1644423838}
   m_Layer: 0
   m_Name: UI_Manager
   m_TagString: Untagged
@@ -3691,6 +3692,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 875873058}
+--- !u!114 &1644423838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644423832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedd52b823115a446b729a5b565b0e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BtnEsc: {fileID: 647103129}
 --- !u!1 &1740777663
 GameObject:
   m_ObjectHideFlags: 0
