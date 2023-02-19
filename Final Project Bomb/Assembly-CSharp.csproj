@@ -47,7 +47,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Phuc\Prefab\BombStun.cs" />
      <Compile Include="Assets\Script\Phuc\Enemy\EnemySkill.cs" />
      <Compile Include="Assets\Script\Phuc\Prefab\PoisonAreaScript.cs" />
      <Compile Include="Assets\Script\Phuc\Stats\Stats.cs" />
@@ -58,7 +57,6 @@
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyOnionMovement.cs" />
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyCarrotMovement.cs" />
      <Compile Include="Assets\Script\Minh\LoadnewScene.cs" />
-     <Compile Include="Assets\Script\Phuc\Prefab\BombSlow.cs" />
      <Compile Include="Assets\Script\Phuc\HealthPlayer.cs" />
      <Compile Include="Assets\Script\Phuc\TilemapManager.cs" />
      <Compile Include="Assets\Script\Phuc\ScriptableLevel.cs" />
@@ -70,11 +68,9 @@
      <Compile Include="Assets\Script\Phuc\MoveCharacter.cs" />
      <Compile Include="Assets\Script\Phuc\ScriptableData.cs" />
      <Compile Include="Assets\Script\Phuc\TilemapManagerEditor.cs" />
-     <Compile Include="Assets\Script\Phuc\Prefab\BombNormal.cs" />
      <Compile Include="Assets\Script\Minh\PauseGame.cs" />
      <Compile Include="Assets\Script\Phuc\EnemyController.cs" />
      <Compile Include="Assets\Script\Minh\RestartFix.cs" />
-     <Compile Include="Assets\Script\Phuc\Prefab\BombPoison.cs" />
      <Compile Include="Assets\Script\Phuc\Prefab\MovingBullet.cs" />
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyBombMovement.cs" />
      <Compile Include="Assets\Script\Phuc\ApplyData.cs" />

@@ -7,7 +7,7 @@ public class SelectItem : MonoBehaviour
     public List<Inventory> inventory;
     public KeyCode selectDown = KeyCode.Q;
     public KeyCode selectUp = KeyCode.E;
-    private int currentSelectItem = 0;
+    public int currentSelectItem = 0;
 
     private void Start()
     {
