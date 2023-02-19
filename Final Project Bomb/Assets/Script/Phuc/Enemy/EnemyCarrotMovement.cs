@@ -9,7 +9,6 @@ public class EnemyCarrotMovement : MonoBehaviour
     public LayerMask wallLayer;
     public LayerMask groundLayer;
     public Transform movePoint;
-    public GameObject testPrefab;
 
     private void Start()
     {
@@ -22,7 +21,7 @@ public class EnemyCarrotMovement : MonoBehaviour
         {
             int randomX = Random.Range(-moveRange - 1, moveRange);
             int randomY = Random.Range(-moveRange - 1, moveRange);
-            Vector3 oldPos = movePoint.position;
+
             if (Physics2D.OverlapBox(movePoint.position + new Vector3(randomX, randomY, 0f), Vector2.one / 5f, 0f, groundLayer)
             && !Physics2D.OverlapBox(movePoint.position + new Vector3(randomX, randomY, 0f), Vector2.one / 5f, 0f, wallLayer))
             {

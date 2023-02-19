@@ -9,6 +9,7 @@ public class PlaceBomb : MonoBehaviour
     public GameObject bombPrefabs;
     public KeyCode inputPlaceBomb = KeyCode.Space;
     public int typeBomb;
+    public int numberBomb;
     public int amountBomb = 2;
     public float timeExplose = 2f;
     private bool keyPlaceBomb = true;
@@ -29,7 +30,7 @@ public class PlaceBomb : MonoBehaviour
     private void Update() 
     {
         // Dat bomb khi duoc Input
-        if (amountBomb > 0 && Input.GetKeyDown(inputPlaceBomb) && keyPlaceBomb) 
+        if (amountBomb > 0 &&  numberBomb > 0 && Input.GetKeyDown(inputPlaceBomb) && keyPlaceBomb) 
         {
             Vector2 positionSprite = transform.position;
             positionSprite.x = Mathf.Round(positionSprite.x);
@@ -57,6 +58,7 @@ public class PlaceBomb : MonoBehaviour
         // Xu ly Bomb
         GameObject bombClone = Instantiate(bombPrefabs, new Vector2(position.x, position.y), Quaternion.identity);
         amountBomb--;
+        numberBomb--;
 
         yield return new WaitForSeconds(timeBombExplose);
 

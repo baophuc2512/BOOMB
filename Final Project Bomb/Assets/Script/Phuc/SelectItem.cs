@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class SelectItem : MonoBehaviour
 {
-    public GameObject[] bombPrefabs;
-    public int[] typeBombs;
-    public float[] timesBombExplose;
+    public List<Inventory> inventory;
     public KeyCode selectDown = KeyCode.Q;
     public KeyCode selectUp = KeyCode.E;
-    private int currentBomb;
+    private int currentSelectItem = 0;
 
-    private void Awake()
+    private void Start()
     {
         pushInfo();
     }
@@ -20,23 +18,33 @@ public class SelectItem : MonoBehaviour
     {
         if (Input.GetKeyDown(selectDown))
         {
-            currentBomb -= 1;
-            if (currentBomb < 0) currentBomb = bombPrefabs.Length - 1;
+            loadInfo();
+            currentSelectItem -= 1;
+            if (currentSelectItem < 0) currentSelectItem = inventory.Count - 1;
             pushInfo();
         }
         if (Input.GetKeyDown(selectUp))
         {
-            currentBomb += 1;
-            if (currentBomb > bombPrefabs.Length - 1) currentBomb = 0;
+            loadInfo();
+            currentSelectItem += 1;
+            if (currentSelectItem > inventory.Count - 1) currentSelectItem = 0;
             pushInfo();
         }
     }
 
     public void pushInfo()
     {
-        PlaceBomb stats = GetComponent<PlaceBomb>();
-        stats.bombPrefabs = bombPrefabs[currentBomb];
-        stats.typeBomb = typeBombs[currentBomb];
-        stats.timeExplose = timesBombExplose[currentBomb];
+        PlaceBomb placeBomb = GetComponent<PlaceBomb>();
+        placeBomb.bombPrefabs = inventory[currentSelectItem].prefab;
+        placeBomb.typeBomb = inventory[currentSelectItem].typeBomb;
+        placeBomb.numberBomb = inventory[currentSelectItem].numberBomb;
+    }
+
+    public void loadInfo()
+    {
+        PlaceBomb placeBomb = GetComponent<PlaceBomb>();
+        inventory[currentSelectItem].prefab = placeBomb.bombPrefabs;
+        inventory[currentSelectItem].typeBomb = placeBomb.typeBomb;
+        inventory[currentSelectItem].numberBomb = placeBomb.numberBomb;
     }
 }
