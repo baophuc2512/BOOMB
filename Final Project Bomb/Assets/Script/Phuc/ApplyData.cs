@@ -15,8 +15,8 @@ public class ApplyData : MonoBehaviour
         playerOne.GetComponent<MoveCharacter>().inputUp = dataToLoad.inputMoveUp;
         playerOne.GetComponent<MoveCharacter>().inputLeft = dataToLoad.inputMoveLeft;
         playerOne.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRight;
-        playerOne.GetComponent<MoveCharacter>().maxHealth = dataToLoad.maxHealth;
-        playerOne.GetComponent<MoveCharacter>().currentHealth = dataToLoad.maxHealth;
+        playerOne.GetComponent<Health>().maxHealth = dataToLoad.maxHealth;
+        playerOne.GetComponent<Health>().currentHealth = dataToLoad.maxHealth;
         playerOne.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBomb;
         playerOne.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
         playerOne.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerOne;
@@ -29,8 +29,8 @@ public class ApplyData : MonoBehaviour
             playerTwo.GetComponent<MoveCharacter>().inputUp = dataToLoad.inputMoveUpTwo;
             playerTwo.GetComponent<MoveCharacter>().inputLeft = dataToLoad.inputMoveLeftTwo;
             playerTwo.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRightTwo;
-            playerTwo.GetComponent<MoveCharacter>().maxHealth = dataToLoad.maxHealthTwo;
-            playerTwo.GetComponent<MoveCharacter>().currentHealth = dataToLoad.maxHealthTwo;
+            playerTwo.GetComponent<Health>().maxHealth = dataToLoad.maxHealthTwo;
+            playerTwo.GetComponent<Health>().currentHealth = dataToLoad.maxHealthTwo;
             playerTwo.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBombTwo;
             playerTwo.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
             playerTwo.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerTwo;

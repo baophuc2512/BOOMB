@@ -2909,7 +2909,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 1, g: 0, b: 0.80241585, a: 1}
   m_FlipX: 0
@@ -3062,7 +3062,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 1, g: 0.64708, b: 0, a: 1}
   m_FlipX: 0
@@ -4057,6 +4057,7 @@ GameObject:
   - component: {fileID: 1114501539}
   - component: {fileID: 1114501538}
   - component: {fileID: 1114501537}
+  - component: {fileID: 1114501544}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Player
@@ -4079,6 +4080,7 @@ MonoBehaviour:
   inventory: []
   selectDown: 113
   selectUp: 101
+  currentSelectItem: 0
 --- !u!114 &1114501538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,16 +4124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  deadDuration: 2
-  maxHealth: 1000
-  currentHealth: 1000
   modeBatTu: 0
   inputUp: 119
   inputDown: 115
   inputLeft: 97
   inputRight: 100
   player: {fileID: 1114501536}
-  deadAnimation: {fileID: 1055157754}
 --- !u!58 &1114501540
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4235,6 +4233,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1114501544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114501536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 299de602ea7663940849adedbcd3a46f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1114501536}
+  currentHealth: 0
+  maxHealth: 0
+  deadAnimation: {fileID: 1055157754}
+  deadDuration: 1
 --- !u!1 &1168603571
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,6 +4900,7 @@ GameObject:
   - component: {fileID: 1881851728}
   - component: {fileID: 1881851731}
   - component: {fileID: 1881851732}
+  - component: {fileID: 1881851733}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4971,16 +4987,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  deadDuration: 2
-  maxHealth: 1000
-  currentHealth: 1000
   modeBatTu: 0
   inputUp: 119
   inputDown: 115
   inputLeft: 97
   inputRight: 100
   player: {fileID: 1881851725}
-  deadAnimation: {fileID: 781840652}
 --- !u!50 &1881851729
 Rigidbody2D:
   serializedVersion: 4
@@ -5063,6 +5075,24 @@ MonoBehaviour:
   inventory: []
   selectDown: 113
   selectUp: 101
+  currentSelectItem: 0
+--- !u!114 &1881851733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881851725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 299de602ea7663940849adedbcd3a46f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1881851725}
+  currentHealth: 0
+  maxHealth: 0
+  deadAnimation: {fileID: 781840652}
+  deadDuration: 1
 --- !u!1 &1930445362
 GameObject:
   m_ObjectHideFlags: 0

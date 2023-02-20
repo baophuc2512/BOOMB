@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3847410401297549931}
   - component: {fileID: 6911345813653297903}
   - component: {fileID: 6911345813653297900}
-  - component: {fileID: 6911345813653297902}
+  - component: {fileID: 3402154838925762441}
   m_Layer: 0
   m_Name: PoisonArea
   m_TagString: DamagePlayer
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.8862745, g: 0.5764706, b: 0, a: 0.41960785}
   m_FlipX: 0
@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2654a112b094c5549a7cf60fa6685793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  existTime: 8
+  existTime: 100
   self: {fileID: 6911345813653297891}
---- !u!114 &6911345813653297902
+--- !u!114 &3402154838925762441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +156,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6911345813653297891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b392cd1a3581847ba34293e17d136b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1266c3dbc781acf45b199f40eede53eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDeal: 10
+  damage: 20
+  decreaseMoveSpeed: 0

@@ -6,10 +6,8 @@ public class MoveCharacter : MonoBehaviour
 {
     [Header("Stats")]
     public float moveSpeed = 10f;
-    public float deadDuration = 1f;
-    public float maxHealth = 100;
-    public float currentHealth = 100;
     public bool modeBatTu = false;
+    private Health health;
     private Rigidbody2D rigidbody;
     [Header("Input Keyboard")]
     public KeyCode inputUp = KeyCode.W;
@@ -18,15 +16,13 @@ public class MoveCharacter : MonoBehaviour
     public KeyCode inputRight = KeyCode.D;
     [Header("Animation")]
     public GameObject player;
-    public GameObject deadAnimation;
     private int directionX = 0;
     private int directionY = 0;
     
     private void Awake() 
     {
-        AnimationScript animationScriptDead = deadAnimation.GetComponent<AnimationScript>();
-        animationScriptDead.enabled = false;
         rigidbody = GetComponent<Rigidbody2D>();
+        health = GetComponent<Health>();
     }
 
     private void Update() 
@@ -56,17 +52,19 @@ public class MoveCharacter : MonoBehaviour
     {
         float moveStepX = moveSpeed * directionX * Time.fixedDeltaTime;
         float moveStepY = moveSpeed * directionY * Time.fixedDeltaTime;
-        rigidbody.MovePosition(rigidbody.position + new Vector2 (moveStepX, moveStepY));
+        rigidbody.MovePosition(rigidbody.position + new Vector2 (moveStepX + 0.00000005f, moveStepY));
     }
     
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        if ((col.CompareTag("Enemy") || col.CompareTag("Explosion") || col.gameObject.CompareTag("ExplosionBoss")) && modeBatTu == false) {
-            StartCoroutine(takeDamage(10));
-            if (currentHealth <= 0) dead();
+        if ((col.gameObject.CompareTag("DamagePlayer")) && modeBatTu == false) {
+            if (col.gameObject.GetComponent<DealDamage>())
+            {
+                StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
+            }
         }
     }
-
+    /*
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Explosion") || col.gameObject.CompareTag("ExplosionBoss") && modeBatTu == false) {
@@ -89,7 +87,7 @@ public class MoveCharacter : MonoBehaviour
         }
         modeBatTu = false;
     }
-
+    
     public void dead() 
     {
         enabled = false;
@@ -102,4 +100,5 @@ public class MoveCharacter : MonoBehaviour
         
         Destroy(player, deadDuration);
     }
+    */
 }

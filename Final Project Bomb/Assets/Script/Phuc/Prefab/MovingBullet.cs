@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovingBullet : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    [SerializeField]private Stats stats;
     private Rigidbody2D rigidbody;
     public float moveSpeed;
     public int directionX = 0;
@@ -13,7 +12,6 @@ public class MovingBullet : MonoBehaviour
     
     private void Awake()
     {
-        stats = GetComponent<Stats>();
         rigidbody = GetComponent<Rigidbody2D>();
     }
 

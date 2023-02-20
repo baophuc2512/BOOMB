@@ -9,7 +9,7 @@ public class ScriptableData : ScriptableObject
 {
     [Header("Character Player 1")]
     public float moveSpeed;
-    public int maxHealth;
+    public float maxHealth;
     public KeyCode inputMoveUp;
     public KeyCode inputMoveDown;
     public KeyCode inputMoveLeft;

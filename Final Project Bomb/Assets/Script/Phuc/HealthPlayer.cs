@@ -8,11 +8,11 @@ public class HealthPlayer : MonoBehaviour
     public GameObject player;
     public Image healthBar;
     public Image healthBarFollow;
-    private MoveCharacter playerMoveCharacter;
+    private Health playerMoveCharacter;
 
     private void Awake()
     {
-        playerMoveCharacter = player.GetComponent<MoveCharacter>();
+        playerMoveCharacter = player.GetComponent<Health>();
     }
 
     private void Update()

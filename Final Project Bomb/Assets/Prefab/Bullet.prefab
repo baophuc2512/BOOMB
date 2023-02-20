@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4046488843289040798}
   - component: {fileID: 4046488843289040799}
   - component: {fileID: 4046488843289040792}
-  - component: {fileID: 8114427821789468142}
+  - component: {fileID: -1998053789173982956}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: DamagePlayer
@@ -146,11 +146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4046488843289040795}
-  stats: {fileID: 0}
   moveSpeed: 2
   directionX: 0
   directionY: 0
---- !u!114 &8114427821789468142
+--- !u!114 &-1998053789173982956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +158,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4046488843289040795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b392cd1a3581847ba34293e17d136b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1266c3dbc781acf45b199f40eede53eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDeal: 100
+  damage: 50
+  decreaseMoveSpeed: 0
