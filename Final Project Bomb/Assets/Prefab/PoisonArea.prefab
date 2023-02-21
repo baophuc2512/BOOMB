@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2654a112b094c5549a7cf60fa6685793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  existTime: 100
+  existTime: 10
   self: {fileID: 6911345813653297891}
 --- !u!114 &3402154838925762441
 MonoBehaviour:

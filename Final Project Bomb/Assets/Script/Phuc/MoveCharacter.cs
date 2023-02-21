@@ -6,7 +6,6 @@ public class MoveCharacter : MonoBehaviour
 {
     [Header("Stats")]
     public float moveSpeed = 10f;
-    public bool modeBatTu = false;
     private Health health;
     private Rigidbody2D rigidbody;
     [Header("Input Keyboard")]
@@ -57,7 +56,7 @@ public class MoveCharacter : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D col)
     {
-        if ((col.gameObject.CompareTag("DamagePlayer")) && modeBatTu == false) {
+        if (col.gameObject.CompareTag("DamagePlayer") || col.gameObject.CompareTag("DamageAll")) {
             if (col.gameObject.GetComponent<DealDamage>())
             {
                 StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));

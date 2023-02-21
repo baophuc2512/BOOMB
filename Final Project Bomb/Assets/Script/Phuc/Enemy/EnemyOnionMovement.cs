@@ -5,9 +5,15 @@ using UnityEngine;
 public class EnemyOnionMovement : MonoBehaviour
 {
     [SerializeField] private EnemySkill enemySkill;
+    private Health health;
     public float moveSpeed;
     public LayerMask wallLayer;
     public Transform movePoint;
+
+    private void Awake()
+    {
+        health = GetComponent<Health>();
+    }
 
     private void Start()
     {
@@ -17,6 +23,16 @@ public class EnemyOnionMovement : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("DamageEnemy") || col.gameObject.CompareTag("DamageAll")) {
+            if (col.gameObject.GetComponent<DealDamage>())
+            {
+                StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
+            }
+        }
     }
 
     public IEnumerator setDirection()

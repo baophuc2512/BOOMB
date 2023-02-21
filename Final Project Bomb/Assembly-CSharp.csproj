@@ -49,15 +49,16 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Phuc\Enemy\EnemySkill.cs" />
      <Compile Include="Assets\Script\Phuc\Prefab\PoisonAreaScript.cs" />
-     <Compile Include="Assets\Script\Phuc\Stats\Stats.cs" />
      <Compile Include="Assets\Script\Minh\Load.cs" />
      <Compile Include="Assets\Script\Phuc\SelectItem.cs" />
      <Compile Include="Assets\EscPause.cs" />
+     <Compile Include="Assets\Script\Phuc\Stats\DealDamage.cs" />
      <Compile Include="Assets\Script\Phuc\SkillBoss.cs" />
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyOnionMovement.cs" />
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyCarrotMovement.cs" />
      <Compile Include="Assets\Script\Minh\LoadnewScene.cs" />
      <Compile Include="Assets\Script\Phuc\HealthPlayer.cs" />
+     <Compile Include="Assets\Script\Phuc\Stats\Health.cs" />
      <Compile Include="Assets\Script\Phuc\TilemapManager.cs" />
      <Compile Include="Assets\Script\Phuc\ScriptableLevel.cs" />
      <Compile Include="Assets\Script\Phuc\ItemPickup.cs" />

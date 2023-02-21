@@ -9,6 +9,8 @@ TagManager:
   - ExplosionBoss
   - DamagePlayer
   - Wall
+  - DamageAll
+  - DamageEnemy
   layers:
   - Default
   - TransparentFX
