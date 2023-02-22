@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e3e576e9f12c841bfe4e3978c8c910, type: 3}
   m_Name: MainDataBattle
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 5
   maxHealth: 100
   inputMoveUp: 119
   inputMoveDown: 115
@@ -30,7 +30,7 @@ MonoBehaviour:
     typeBomb: 3
     numberBomb: 100
   havePlayerTwo: 1
-  moveSpeedTwo: 0
+  moveSpeedTwo: 5
   maxHealthTwo: 200
   inputMoveUpTwo: 273
   inputMoveDownTwo: 274

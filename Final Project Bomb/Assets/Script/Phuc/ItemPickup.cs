@@ -13,6 +13,7 @@ public class ItemPickup : MonoBehaviour
         {
             PlaceBomb tmp = col.GetComponent<PlaceBomb>();
             MoveCharacter tmp2 = col.GetComponent<MoveCharacter>();
+            Health tmp3 = col.GetComponent<Health>();
             if (nameOfItem == "ItemBomb" && tmp) 
             {
                 tmp.amountBomb += 1;
@@ -25,7 +26,7 @@ public class ItemPickup : MonoBehaviour
 
             if (nameOfItem == "ItemSpeed" && tmp2) 
             {
-                tmp2.moveSpeed += 1;
+                tmp3.currentSpeed += 1;
             }
             Destroy(self);
         }

@@ -27,6 +27,8 @@ public class EnemyCarrotMovement : MonoBehaviour
             if (col.gameObject.GetComponent<DealDamage>())
             {
                 StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
+                StartCoroutine(health.slowDown(col.gameObject.GetComponent<DealDamage>().decreaseMoveSpeed, col.gameObject.GetComponent<DealDamage>().timeDeacreaseMoveSpeed));
+                StartCoroutine(health.takeDamagePerSecond(col.gameObject.GetComponent<DealDamage>().damagePerSecond, col.gameObject.GetComponent<DealDamage>().timeTakeDamage));
             }
         }
     }

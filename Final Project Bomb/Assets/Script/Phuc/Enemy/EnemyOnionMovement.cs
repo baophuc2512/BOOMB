@@ -6,7 +6,6 @@ public class EnemyOnionMovement : MonoBehaviour
 {
     [SerializeField] private EnemySkill enemySkill;
     private Health health;
-    public float moveSpeed;
     public LayerMask wallLayer;
     public Transform movePoint;
 
@@ -22,7 +21,7 @@ public class EnemyOnionMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, health.currentSpeed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -31,6 +30,8 @@ public class EnemyOnionMovement : MonoBehaviour
             if (col.gameObject.GetComponent<DealDamage>())
             {
                 StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
+                StartCoroutine(health.slowDown(col.gameObject.GetComponent<DealDamage>().decreaseMoveSpeed, col.gameObject.GetComponent<DealDamage>().timeDeacreaseMoveSpeed));
+                StartCoroutine(health.takeDamagePerSecond(col.gameObject.GetComponent<DealDamage>().damagePerSecond, col.gameObject.GetComponent<DealDamage>().timeTakeDamage));
             }
         }
     }

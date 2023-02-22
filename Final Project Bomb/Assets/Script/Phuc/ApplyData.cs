@@ -17,6 +17,7 @@ public class ApplyData : MonoBehaviour
         playerOne.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRight;
         playerOne.GetComponent<Health>().maxHealth = dataToLoad.maxHealth;
         playerOne.GetComponent<Health>().currentHealth = dataToLoad.maxHealth;
+        playerOne.GetComponent<Health>().currentSpeed = dataToLoad.moveSpeed;
         playerOne.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBomb;
         playerOne.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
         playerOne.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerOne;
@@ -31,6 +32,7 @@ public class ApplyData : MonoBehaviour
             playerTwo.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRightTwo;
             playerTwo.GetComponent<Health>().maxHealth = dataToLoad.maxHealthTwo;
             playerTwo.GetComponent<Health>().currentHealth = dataToLoad.maxHealthTwo;
+            playerTwo.GetComponent<Health>().currentSpeed = dataToLoad.moveSpeed;
             playerTwo.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBombTwo;
             playerTwo.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
             playerTwo.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerTwo;

@@ -5,7 +5,6 @@ using UnityEngine;
 public class MoveCharacter : MonoBehaviour
 {
     [Header("Stats")]
-    public float moveSpeed = 10f;
     private Health health;
     private Rigidbody2D rigidbody;
     [Header("Input Keyboard")]
@@ -49,8 +48,8 @@ public class MoveCharacter : MonoBehaviour
     }
     private void FixedUpdate() 
     {
-        float moveStepX = moveSpeed * directionX * Time.fixedDeltaTime;
-        float moveStepY = moveSpeed * directionY * Time.fixedDeltaTime;
+        float moveStepX = health.currentSpeed * directionX * Time.fixedDeltaTime;
+        float moveStepY = health.currentSpeed * directionY * Time.fixedDeltaTime;
         rigidbody.MovePosition(rigidbody.position + new Vector2 (moveStepX + 0.00000005f, moveStepY));
     }
     
@@ -60,44 +59,9 @@ public class MoveCharacter : MonoBehaviour
             if (col.gameObject.GetComponent<DealDamage>())
             {
                 StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
+                StartCoroutine(health.slowDown(col.gameObject.GetComponent<DealDamage>().decreaseMoveSpeed, col.gameObject.GetComponent<DealDamage>().timeDeacreaseMoveSpeed));
+                StartCoroutine(health.takeDamagePerSecond(col.gameObject.GetComponent<DealDamage>().damagePerSecond, col.gameObject.GetComponent<DealDamage>().timeTakeDamage));
             }
         }
     }
-    /*
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Explosion") || col.gameObject.CompareTag("ExplosionBoss") && modeBatTu == false) {
-            StartCoroutine(takeDamage(10));
-            if (currentHealth <= 0) dead();
-        }
-    }
-
-    public IEnumerator takeDamage(int damage)
-    {
-        currentHealth -= damage;
-        modeBatTu = true;
-        Color oldColor = GetComponent<SpriteRenderer>().color;
-        for (int tmp = 0; tmp <= 5; tmp++)
-        {
-            GetComponent<SpriteRenderer>().color = Color.white;
-            yield return new WaitForSeconds(0.15f);
-            GetComponent<SpriteRenderer>().color = oldColor;
-            yield return new WaitForSeconds(0.15f);
-        }
-        modeBatTu = false;
-    }
-    
-    public void dead() 
-    {
-        enabled = false;
-        GetComponent<SpriteRenderer>().enabled = false;
-        GetComponent<PlaceBomb>().enabled = false;
-        AnimationScript animationScriptDead = deadAnimation.GetComponent<AnimationScript>();
-        animationScriptDead.enabled = true;
-        animationScriptDead.animationTime = deadDuration / animationScriptDead.animationSprites.Length;
-        animationScriptDead.idle = false;
-        
-        Destroy(player, deadDuration);
-    }
-    */
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -3421304043352961433}
   - component: {fileID: 1132106154299522748}
   - component: {fileID: 7400943720223552216}
+  - component: {fileID: -3407190239465752598}
   m_Layer: 8
   m_Name: Bomb
   m_TagString: Untagged
@@ -143,3 +144,29 @@ MonoBehaviour:
   - {fileID: -5337159410277229379, guid: 88c81958fd86414448d605df2b5cbe9a, type: 3}
   loop: 1
   idle: 0
+--- !u!114 &-3407190239465752598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577100957805142216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d91adde7113a204a83bf33b40fdd681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombSelf: {fileID: 3577100957805142216}
+  timeExplose: 2
+  explosionPrefabs: {fileID: 2430569008698938120, guid: 251e84824d67e0f45a7c46d80621c098, type: 3}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  bombLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  explosionRadius: 2
+  explosionDuration: 1
+  destructiblesPrefabs: {fileID: 3723379690726331466, guid: ad4a0225442160d4fa35d8fb7833096d, type: 3}
+  destructiblesTiles: {fileID: 0}
+  destructiblesDuration: 1

@@ -2895,7 +2895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySkill: {fileID: 2139625282}
-  moveSpeed: 3
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -3012,6 +3011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2057136492}
   currentHealth: 200
+  currentSpeed: 5
   maxHealth: 200
   deadAnimation: {fileID: 489710065}
   deadDuration: 1
@@ -3184,6 +3184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1005752953}
   currentHealth: 100
+  currentSpeed: 0
   maxHealth: 100
   deadAnimation: {fileID: 511705821}
   deadDuration: 1
@@ -4386,7 +4387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bf9e0c2242b3a47a620746b5c86259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   inputUp: 119
   inputDown: 115
   inputLeft: 97
@@ -4509,6 +4509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1114501536}
   currentHealth: 0
+  currentSpeed: 0
   maxHealth: 0
   deadAnimation: {fileID: 1055157754}
   deadDuration: 1
@@ -5590,7 +5591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bf9e0c2242b3a47a620746b5c86259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   inputUp: 119
   inputDown: 115
   inputLeft: 97
@@ -5693,6 +5693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1881851725}
   currentHealth: 0
+  currentSpeed: 0
   maxHealth: 0
   deadAnimation: {fileID: 781840652}
   deadDuration: 1
