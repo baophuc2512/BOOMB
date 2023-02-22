@@ -43,9 +43,9 @@ public class Health : MonoBehaviour
     {
         Destroy(player, deadDuration);
         if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = false;
-        GetComponent<SpriteRenderer>().enabled = false;
-        GetComponent<PlaceBomb>().enabled = false;
-        if (deadAnimation != null)
+        if (GetComponent<SpriteRenderer>()) GetComponent<SpriteRenderer>().enabled = false;
+        if (GetComponent<PlaceBomb>()) GetComponent<PlaceBomb>().enabled = false;
+        if (deadAnimation.GetComponent<AnimationScript>())
         {
             AnimationScript animationScriptDead = deadAnimation.GetComponent<AnimationScript>();
             animationScriptDead.enabled = true;

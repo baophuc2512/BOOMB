@@ -57,7 +57,7 @@
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyOnionMovement.cs" />
      <Compile Include="Assets\Script\Phuc\Enemy\EnemyCarrotMovement.cs" />
      <Compile Include="Assets\Script\Minh\LoadnewScene.cs" />
-     <Compile Include="Assets\Script\Phuc\HealthPlayer.cs" />
+     <Compile Include="Assets\Script\Phuc\HealthUI.cs" />
      <Compile Include="Assets\Script\Phuc\Stats\Health.cs" />
      <Compile Include="Assets\Script\Phuc\TilemapManager.cs" />
      <Compile Include="Assets\Script\Phuc\ScriptableLevel.cs" />
