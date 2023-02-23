@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Phuc\Enemy\EnemySkill.cs" />
-     <Compile Include="Assets\Script\Phuc\Prefab\PoisonAreaScript.cs" />
+     <Compile Include="Assets\Script\Phuc\Prefab\AreaScript.cs" />
      <Compile Include="Assets\Script\Minh\Load.cs" />
      <Compile Include="Assets\Script\Phuc\SelectItem.cs" />
      <Compile Include="Assets\EscPause.cs" />

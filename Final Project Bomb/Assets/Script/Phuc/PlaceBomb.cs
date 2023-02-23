@@ -93,112 +93,38 @@ public class PlaceBomb : MonoBehaviour
         }
     } 
 
-    // ---------------------------------------------------- BOMB THUONG ------------------------------------- \\
+    // ---------------------------------------------------- BOMB ------------------------------------- \\
 
     public void exploseBomb(Vector2 positionExplose)
     {
-        Vector2 position;
-        // No chinh giua
         createExplose(positionExplose);
-        // No sang trai
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x - tmp;
-            position.y = positionExplose.y;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
-        // No sang phai
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x + tmp;
-            position.y = positionExplose.y;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
-        // No len tren
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x;
-            position.y = positionExplose.y + tmp;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
-        // No xuong duoi
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x;
-            position.y = positionExplose.y - tmp;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
+        createExploseLine(1, 0, positionExplose, true);
+        createExploseLine(-1, 0, positionExplose, true);
+        createExploseLine(0, 1, positionExplose, true);
+        createExploseLine(0, -1, positionExplose, true);
     }
-
-    // ---------------------------------------------------- BOMB 2 ------------------------------------- \\
 
     public void exploseBomb2(Vector2 positionExplose)
     {
-        Vector2 position;
-        // No chinh giua
         createExplose(positionExplose);
-        // No sang trai tren
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
+        createExploseLine(1, 1, positionExplose, true);
+        createExploseLine(-1, 1, positionExplose, true);
+        createExploseLine(-1, -1, positionExplose, true);
+        createExploseLine(1, -1, positionExplose, true);
+    }
+
+
+    // ----------------------------------------------------------------------------------------- \\
+
+    // typeX va typeY chi co -1, 0, 1
+
+    public void createExploseLine(int typeX, int typeY, Vector2 position, bool breakWall)
+    {
+        for (int tmp = 1; tmp <= explosionRadius; tmp++)
         {
-            position.x = positionExplose.x - tmp;
-            position.y = positionExplose.y + tmp;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
-        // No sang phai duoi
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x + tmp;
-            position.y = positionExplose.y - tmp;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
-        // No len phai tren
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x + tmp;
-            position.y = positionExplose.y + tmp;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
-            {
-                createWallBreak(position);
-                break;
-            }
-            createExplose(position);
-        }
-        // No xuong trai duoi
-        for (int tmp = 1; tmp <= explosionRadius; tmp++) 
-        {
-            position.x = positionExplose.x - tmp;
-            position.y = positionExplose.y - tmp;
-            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer))
+            position.x = position.x + tmp * typeX;
+            position.y = position.y + tmp * typeY;
+            if (Physics2D.OverlapBox(position, Vector2.one / 2f, 0f, wallLayer) && breakWall == true)
             {
                 createWallBreak(position);
                 break;
@@ -206,8 +132,6 @@ public class PlaceBomb : MonoBehaviour
             createExplose(position);
         }
     }
-
-    // ----------------------------------------------------------------------------------------- \\
 
     public void createExplose(Vector2 positionExplose) 
     {

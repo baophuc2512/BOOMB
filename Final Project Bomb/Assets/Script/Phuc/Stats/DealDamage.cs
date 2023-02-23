@@ -12,4 +12,7 @@ public class DealDamage : MonoBehaviour
     [Header("Damage Per Second")]
     public int damagePerSecond;
     public int timeTakeDamage;
+    [Header("Stun")]
+    public bool stun;
+    public int timeStun;
 }

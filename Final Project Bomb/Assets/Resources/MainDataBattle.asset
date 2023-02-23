@@ -22,7 +22,7 @@ MonoBehaviour:
   inventoryPlayerOne:
   - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
     typeBomb: 1
-    numberBomb: 100
+    numberBomb: 98
   - prefab: {fileID: 6106114448578197213, guid: 3d2defe2ec89abe4fa1bd45343dcc49b, type: 3}
     typeBomb: 2
     numberBomb: 100
@@ -42,4 +42,5 @@ MonoBehaviour:
     typeBomb: 0
     numberBomb: 0
   amountBombCanPlace: 2
+  levelMap: 1
   enemys: []

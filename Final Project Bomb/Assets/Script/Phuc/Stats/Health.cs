@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     private bool modeBatTu = false;
     private bool modeNoSlowDown = false;
     private bool modeNoTakeDamagePerSecond = false;
+    private bool modeNoTakeStun = false;
 
     private void Awake()
     {
@@ -20,6 +21,21 @@ public class Health : MonoBehaviour
         {
             AnimationScript animationScriptDead = deadAnimation.GetComponent<AnimationScript>();
             animationScriptDead.enabled = false;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if ((col.gameObject.CompareTag("DamageEnemy") && player.CompareTag("Enemy"))
+        || (col.gameObject.CompareTag("DamagePlayer") && player.CompareTag("Player"))
+        || col.gameObject.CompareTag("DamageAll")) {
+            if (col.gameObject.GetComponent<DealDamage>())
+            {
+                StartCoroutine(takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
+                StartCoroutine(slowDown(col.gameObject.GetComponent<DealDamage>().decreaseMoveSpeed, col.gameObject.GetComponent<DealDamage>().timeDeacreaseMoveSpeed));
+                StartCoroutine(takeDamagePerSecond(col.gameObject.GetComponent<DealDamage>().damagePerSecond, col.gameObject.GetComponent<DealDamage>().timeTakeDamage));
+                StartCoroutine(takeStun(col.gameObject.GetComponent<DealDamage>().stun, col.gameObject.GetComponent<DealDamage>().timeStun));
+            }
         }
     }
 
@@ -77,6 +93,35 @@ public class Health : MonoBehaviour
                 modeNoTakeDamagePerSecond = false;
             } 
             
+        }
+    }
+
+    public IEnumerator takeStun(bool stun, float time)
+    {
+        if (stun != false && time != 0)
+        {
+            if (modeNoTakeStun == false)
+            {
+                modeNoTakeStun = true;
+                if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = false;
+                if (GetComponent<PlaceBomb>()) GetComponent<PlaceBomb>().enabled = false;
+                if (GetComponent<EnemyCarrotMovement>()) GetComponent<EnemyCarrotMovement>().enabled = false;
+                if (GetComponent<EnemyOnionMovement>()) GetComponent<EnemyOnionMovement>().enabled = false;
+                Color oldColor = GetComponent<SpriteRenderer>().color;
+                for (int tmp = 0; tmp <= time/0.15f; tmp++)
+                {
+                    GetComponent<SpriteRenderer>().color = Color.yellow;
+                    yield return new WaitForSeconds(0.15f);
+                    GetComponent<SpriteRenderer>().color = oldColor;
+                    yield return new WaitForSeconds(0.15f);
+                }
+                if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = true;
+                if (GetComponent<PlaceBomb>()) GetComponent<PlaceBomb>().enabled = true;
+                if (GetComponent<EnemyCarrotMovement>()) GetComponent<EnemyCarrotMovement>().enabled = true;
+                if (GetComponent<EnemyOnionMovement>()) GetComponent<EnemyOnionMovement>().enabled = true;
+                yield return new WaitForSeconds(1f);
+                modeNoTakeStun = false;
+            }
         }
     }
 

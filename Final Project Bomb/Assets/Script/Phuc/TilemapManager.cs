@@ -11,6 +11,13 @@ public class TilemapManager : MonoBehaviour
 {
     [SerializeField] private Tilemap groundMap, destructableMap, indestructableMap;
     [SerializeField] private int levelIndex;
+    [SerializeField] private ScriptableData dataLoad;
+
+    private void Start()
+    {
+        levelIndex = dataLoad.levelMap;
+        loadMap();
+    }
 
     public void saveMap()
     {

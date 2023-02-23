@@ -21,18 +21,6 @@ public class EnemyCarrotMovement : MonoBehaviour
         StartCoroutine(setDirection());
     }
 
-    private void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("DamageEnemy") || col.gameObject.CompareTag("DamageAll")) {
-            if (col.gameObject.GetComponent<DealDamage>())
-            {
-                StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
-                StartCoroutine(health.slowDown(col.gameObject.GetComponent<DealDamage>().decreaseMoveSpeed, col.gameObject.GetComponent<DealDamage>().timeDeacreaseMoveSpeed));
-                StartCoroutine(health.takeDamagePerSecond(col.gameObject.GetComponent<DealDamage>().damagePerSecond, col.gameObject.GetComponent<DealDamage>().timeTakeDamage));
-            }
-        }
-    }
-
     public IEnumerator setDirection()
     {
         while (true)

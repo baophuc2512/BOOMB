@@ -52,16 +52,4 @@ public class MoveCharacter : MonoBehaviour
         float moveStepY = health.currentSpeed * directionY * Time.fixedDeltaTime;
         rigidbody.MovePosition(rigidbody.position + new Vector2 (moveStepX + 0.00000005f, moveStepY));
     }
-    
-    private void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("DamagePlayer") || col.gameObject.CompareTag("DamageAll")) {
-            if (col.gameObject.GetComponent<DealDamage>())
-            {
-                StartCoroutine(health.takeDamage(col.gameObject.GetComponent<DealDamage>().damage));
-                StartCoroutine(health.slowDown(col.gameObject.GetComponent<DealDamage>().decreaseMoveSpeed, col.gameObject.GetComponent<DealDamage>().timeDeacreaseMoveSpeed));
-                StartCoroutine(health.takeDamagePerSecond(col.gameObject.GetComponent<DealDamage>().damagePerSecond, col.gameObject.GetComponent<DealDamage>().timeTakeDamage));
-            }
-        }
-    }
 }

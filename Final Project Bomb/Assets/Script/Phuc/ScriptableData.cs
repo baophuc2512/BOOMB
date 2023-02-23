@@ -30,6 +30,7 @@ public class ScriptableData : ScriptableObject
 
     [Header("In Game Setting")]
     public int amountBombCanPlace; 
+    public int levelMap;
     
     
 

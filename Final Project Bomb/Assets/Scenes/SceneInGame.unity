@@ -4023,7 +4023,7 @@ GameObject:
   - component: {fileID: 1005752954}
   m_Layer: 0
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6462,7 +6462,7 @@ GameObject:
   - component: {fileID: 2057136493}
   m_Layer: 0
   m_Name: Enemy 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6802,6 +6802,7 @@ MonoBehaviour:
   destructableMap: {fileID: 2035417107}
   indestructableMap: {fileID: 191106911}
   levelIndex: 1
+  dataLoad: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
 --- !u!114 &2139625281
 MonoBehaviour:
   m_ObjectHideFlags: 0
