@@ -29,5 +29,9 @@ public class PanelOpener : MonoBehaviour
             Panel.transform.gameObject.SetActive(false);
         opened = false;
     }
+    public void JustopenPanel()
+    {
+        Panel.transform.gameObject.SetActive(true);
+    }
     
 }
