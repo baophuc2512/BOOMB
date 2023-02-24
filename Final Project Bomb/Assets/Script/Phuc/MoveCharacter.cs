@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class MoveCharacter : MonoBehaviour
+public class MoveCharacter : NetworkBehaviour
 {
     [Header("Stats")]
     private Health health;
@@ -25,6 +26,10 @@ public class MoveCharacter : MonoBehaviour
 
     private void Update() 
     {
+        if (!IsOwner) {
+            return;
+        }
+
         if (Input.GetKey(inputUp)) {
             directionX = 0;
             directionY = 1;

@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneLoading.unity
     guid: f1520d1b10631234388aea33fd12f3ff
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneHome.unity
     guid: 4b36cdaef274b17478d2ad148c0346ec
   - enabled: 1
@@ -16,8 +16,8 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: 
-    guid: 78e962c141bfe464d8143da80d91a907
-  - enabled: 1
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Scene_BeforeBattle.unity
     guid: 95a0990a322321b4daf90db5369a36c7
   m_configObjects: {}
