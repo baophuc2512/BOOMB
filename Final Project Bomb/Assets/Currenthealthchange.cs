@@ -5,16 +5,20 @@ using UnityEngine.UI;
 
 public class Currenthealthchange : MonoBehaviour
 {
-    [SerializeField] Health mau;
+    
+    public ScriptableData Datadata;
     public Text thistext;
+    public InputField thisinput;
     float somau;
     KeyCode vkey;
     private void Awake()
     {
-        thistext.text=thistext.text+ mau.currentHealth.ToString();
+        thistext.text = thistext.text + Datadata.maxHealth;
     }
     public void Changmau()
     {
-        
+        float result;
+        float.TryParse(thisinput.text, out result);
+        Datadata.maxHealth = result;
     }
 }
