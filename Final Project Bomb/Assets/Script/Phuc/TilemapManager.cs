@@ -9,7 +9,7 @@ using UnityEngine.Tilemaps;
 
 public class TilemapManager : MonoBehaviour
 {
-    [SerializeField] private Tilemap groundMap, destructableMap, indestructableMap;
+    [SerializeField] private Tilemap groundMap, destructableMap, indestructableMap, enemySpawnMap;
     [SerializeField] private int levelIndex;
     [SerializeField] private ScriptableData dataLoad;
 
@@ -29,6 +29,7 @@ public class TilemapManager : MonoBehaviour
         newLevel.groundTiles = GetTilesFromMap(groundMap).ToList();
         newLevel.destructableTiles = GetTilesFromMap(destructableMap).ToList();
         newLevel.indestructableTiles = GetTilesFromMap(indestructableMap).ToList();
+        newLevel.enemySpawnTiles = GetTilesFromMap(enemySpawnMap).ToList();
 
         ScriptableObjectUtility.SaveLevelFile(newLevel);
 
@@ -84,6 +85,12 @@ public class TilemapManager : MonoBehaviour
         {
             if (savedTile.tile.Type == TileType.wallUnbreakable)
                 indestructableMap.SetTile(savedTile.position, savedTile.tile);
+        }
+        foreach (var savedTile in level.enemySpawnTiles)
+        {
+            if (savedTile.tile.Type == TileType.enemyCarrot
+            || savedTile.tile.Type == TileType.enemyOnion)
+                enemySpawnMap.SetTile(savedTile.position, savedTile.tile);
         }
     }
 }

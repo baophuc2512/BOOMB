@@ -11,18 +11,30 @@ public class ApplyData : MonoBehaviour
     
     private void Awake()
     {
-        playerOne.GetComponent<MoveCharacter>().inputDown = dataToLoad.inputMoveDown;
-        playerOne.GetComponent<MoveCharacter>().inputUp = dataToLoad.inputMoveUp;
-        playerOne.GetComponent<MoveCharacter>().inputLeft = dataToLoad.inputMoveLeft;
-        playerOne.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRight;
-        playerOne.GetComponent<Health>().maxHealth = dataToLoad.maxHealth;
-        playerOne.GetComponent<Health>().currentHealth = dataToLoad.maxHealth;
-        playerOne.GetComponent<Health>().currentSpeed = dataToLoad.moveSpeed;
-        playerOne.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBomb;
-        playerOne.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
-        playerOne.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerOne;
+        if (GetComponent<MoveCharacter>()) 
+        {
+            playerOne.GetComponent<MoveCharacter>().inputDown = dataToLoad.inputMoveDown;
+            playerOne.GetComponent<MoveCharacter>().inputUp = dataToLoad.inputMoveUp;
+            playerOne.GetComponent<MoveCharacter>().inputLeft = dataToLoad.inputMoveLeft;
+            playerOne.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRight;
+        }
+        if (GetComponent<Health>()) 
+        {
+            playerOne.GetComponent<Health>().maxHealth = dataToLoad.maxHealth;
+            playerOne.GetComponent<Health>().currentHealth = dataToLoad.maxHealth;
+            playerOne.GetComponent<Health>().currentSpeed = dataToLoad.moveSpeed;
+        }
+        if (GetComponent<PlaceBomb>()) 
+        {
+            playerOne.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBomb;
+            playerOne.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
+        }
+        if (GetComponent<SelectItem>()) 
+        {
+            playerOne.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerOne;
+        }
 
-        if (dataToLoad.havePlayerTwo == true)
+        if (dataToLoad.havePlayerTwo == true && playerTwo != null)
         {
             playerTwo.SetActive(true);
             healthBarPlayerTwo.SetActive(true);

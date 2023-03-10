@@ -19,4 +19,7 @@ public enum TileType
     wallBreakable = 100,
     // Indestructable
     wallUnbreakable = 200,
+    // Spawn Enemy
+    enemyCarrot = 300,
+    enemyOnion = 301,
 }

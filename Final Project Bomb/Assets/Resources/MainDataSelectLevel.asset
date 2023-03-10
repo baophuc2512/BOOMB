@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e3e576e9f12c841bfe4e3978c8c910, type: 3}
+  m_Name: MainDataSelectLevel
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  maxHealth: 100
+  inputMoveUp: 119
+  inputMoveDown: 115
+  inputMoveLeft: 97
+  inputMoveRight: 100
+  inputPlaceBomb: 32
+  inventoryPlayerOne:
+  - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
+    typeBomb: 1
+    numberBomb: 98
+  - prefab: {fileID: 6106114448578197213, guid: 3d2defe2ec89abe4fa1bd45343dcc49b, type: 3}
+    typeBomb: 2
+    numberBomb: 100
+  - prefab: {fileID: 4735137899569904643, guid: 410ee18664c74564db40b41920ca555f, type: 3}
+    typeBomb: 3
+    numberBomb: 100
+  havePlayerTwo: 0
+  moveSpeedTwo: 5
+  maxHealthTwo: 200
+  inputMoveUpTwo: 273
+  inputMoveDownTwo: 274
+  inputMoveLeftTwo: 276
+  inputMoveRightTwo: 275
+  inputPlaceBombTwo: 112
+  inventoryPlayerTwo:
+  - prefab: {fileID: 0}
+    typeBomb: 0
+    numberBomb: 0
+  amountBombCanPlace: 2
+  levelMap: 4
+  enemys: []

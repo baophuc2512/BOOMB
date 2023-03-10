@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyCarrotMovement : MonoBehaviour
 {
-    [SerializeField] private EnemySkill enemySkill;
+    private EnemySkill enemySkill;
     [SerializeField] private int moveRange;
     private Health health;
     public LayerMask wallLayer;
@@ -14,6 +14,7 @@ public class EnemyCarrotMovement : MonoBehaviour
     private void Awake() 
     {
         health = GetComponent<Health>();
+        enemySkill = GameObject.Find("Manager").GetComponent<EnemySkill>();
     }
 
     private void Start()

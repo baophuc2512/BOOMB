@@ -9,6 +9,7 @@ public class ScriptableLevel : ScriptableObject
     public List<SavedTile> groundTiles;
     public List<SavedTile> destructableTiles;
     public List<SavedTile> indestructableTiles;
+    public List<SavedTile> enemySpawnTiles; 
 }
 
 [Serializable]
