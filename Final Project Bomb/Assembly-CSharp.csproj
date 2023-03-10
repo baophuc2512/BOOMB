@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\Phuc\LevelTile.cs" />
     <Compile Include="Assets\Script\Minh\DeathTriggeredPanel.cs" />
     <Compile Include="Assets\Script\Phuc\TilemapManagerEditor.cs" />
+    <Compile Include="Assets\Pickmap.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBombMovement.cs" />
     <Compile Include="Assets\Script\Minh\ResolutionManager.cs" />
     <Compile Include="Assets\Currenthealthchange.cs" />
@@ -95,7 +96,6 @@
     <Compile Include="Assets\Script\Phuc\ApplyData.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\Pickmap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
