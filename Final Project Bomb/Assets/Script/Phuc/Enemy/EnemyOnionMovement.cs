@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyOnionMovement : MonoBehaviour
 {
-    [SerializeField] private EnemySkill enemySkill;
+    private EnemySkill enemySkill;
     private Health health;
     public LayerMask wallLayer;
     public Transform movePoint;
@@ -12,6 +12,7 @@ public class EnemyOnionMovement : MonoBehaviour
     private void Awake()
     {
         health = GetComponent<Health>();
+        enemySkill = GameObject.Find("Manager").GetComponent<EnemySkill>();
     }
 
     private void Start()

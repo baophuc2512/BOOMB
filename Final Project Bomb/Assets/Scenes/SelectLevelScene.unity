@@ -45751,6 +45751,7 @@ MonoBehaviour:
   groundMap: {fileID: 691530363}
   destructableMap: {fileID: 1920979598}
   indestructableMap: {fileID: 574972894}
+  enemySpawnMap: {fileID: 0}
   levelIndex: 4
   dataLoad: {fileID: 11400000, guid: 6d003650dd3297240b45ae462050dc13, type: 2}
 --- !u!4 &1457738029
