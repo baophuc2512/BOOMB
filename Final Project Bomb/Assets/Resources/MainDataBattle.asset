@@ -23,12 +23,6 @@ MonoBehaviour:
   - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
     typeBomb: 1
     numberBomb: 98
-  - prefab: {fileID: 6106114448578197213, guid: 3d2defe2ec89abe4fa1bd45343dcc49b, type: 3}
-    typeBomb: 2
-    numberBomb: 100
-  - prefab: {fileID: 4735137899569904643, guid: 410ee18664c74564db40b41920ca555f, type: 3}
-    typeBomb: 3
-    numberBomb: 100
   havePlayerTwo: 1
   moveSpeedTwo: 5
   maxHealthTwo: 200

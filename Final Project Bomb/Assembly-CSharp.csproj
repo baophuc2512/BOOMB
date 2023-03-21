@@ -57,9 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Phuc\Prefab\AreaScript.cs" />
+    <Compile Include="Assets\InventoryItem.cs" />
     <Compile Include="Assets\EscPause.cs" />
     <Compile Include="Assets\Script\Phuc\Stats\DealDamage.cs" />
     <Compile Include="Assets\Script\Phuc\SkillBoss.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\InterfaceInteract.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyOnionMovement.cs" />
     <Compile Include="Assets\Script\Minh\LoadnewScene.cs" />
     <Compile Include="Assets\Script\Phuc\Stats\Health.cs" />
@@ -76,12 +78,15 @@
     <Compile Include="Assets\Script\Phuc\CameraFollow.cs" />
     <Compile Include="Assets\Script\Minh\ExitGame.cs" />
     <Compile Include="Assets\Script\Minh\LoadingScene.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\LevelInteract.cs" />
     <Compile Include="Assets\CurrentHealth2.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemySkill.cs" />
     <Compile Include="Assets\Script\Minh\Load.cs" />
     <Compile Include="Assets\Script\Phuc\SelectItem.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyCarrotMovement.cs" />
     <Compile Include="Assets\Script\Phuc\HealthUI.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\PlayerInteract.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\DialogueInteract.cs" />
     <Compile Include="Assets\Script\Phuc\TilemapManager.cs" />
     <Compile Include="Assets\Script\Phuc\ScriptableLevel.cs" />
     <Compile Include="Assets\Script\Phuc\AnimationScript.cs" />
@@ -90,10 +95,12 @@
     <Compile Include="Assets\Script\Phuc\MoveCharacter.cs" />
     <Compile Include="Assets\Script\Phuc\ScriptableData.cs" />
     <Compile Include="Assets\Script\Minh\PauseGame.cs" />
+    <Compile Include="Assets\Script\Phuc\GenerateEnemy.cs" />
     <Compile Include="Assets\Script\Phuc\EnemyController.cs" />
     <Compile Include="Assets\Script\Minh\RestartFix.cs" />
     <Compile Include="Assets\Script\Phuc\Prefab\MovingBullet.cs" />
     <Compile Include="Assets\Script\Phuc\ApplyData.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\PlayerInteractUI.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
   </ItemGroup>
