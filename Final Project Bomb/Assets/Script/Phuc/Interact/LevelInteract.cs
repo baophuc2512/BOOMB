@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelInteract : MonoBehaviour, InterfaceInteract
 {
@@ -11,6 +12,7 @@ public class LevelInteract : MonoBehaviour, InterfaceInteract
     public void Interact()
     {
         mainDataBattle.levelMap = levelMap;
+        SceneManager.LoadScene("SceneInGame");
     }
 
     public string GetInteractText()

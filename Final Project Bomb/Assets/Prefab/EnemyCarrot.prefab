@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7354962590599053447}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyCarrot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7354962590793590201}
   - component: {fileID: 7354962590793590203}
   - component: {fileID: 7354962590793590200}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: healthBarFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 7354962590821041317}
   - component: {fileID: 7354962590821041319}
   - component: {fileID: 7354962590821041316}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: healthBarFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 7354962591078354973}
   - component: {fileID: 7354962591078354978}
   - component: {fileID: 7354962591078354974}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyCarrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85ae94f7d1ddf146954f358c51ccce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySkill: {fileID: 0}
   moveRange: 2
   wallLayer:
     serializedVersion: 2
@@ -371,7 +370,7 @@ GameObject:
   - component: {fileID: 7354962591597284866}
   - component: {fileID: 7354962591597285372}
   - component: {fileID: 7354962591597285373}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: healthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7354962591975007809}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7354962592072167011}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MovePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -519,7 +518,7 @@ GameObject:
   - component: {fileID: 7354962592574110344}
   - component: {fileID: 7354962592574110345}
   - component: {fileID: 7354962592574110350}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

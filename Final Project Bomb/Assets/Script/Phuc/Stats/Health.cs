@@ -48,12 +48,13 @@ public class Health : MonoBehaviour
                 currentHealth -= damage;
                 modeBatTu = true;
                 if (currentHealth <= 0) dead();
-                Color oldColor = GetComponent<SpriteRenderer>().color;
+                SpriteRenderer tmpSpriteRenderer = GetComponent<SpriteRenderer>();
+                Color oldColor = tmpSpriteRenderer.color;
                 for (int tmp = 0; tmp <= 5; tmp++)
                 {
-                    GetComponent<SpriteRenderer>().color = Color.white;
+                    tmpSpriteRenderer.color = Color.white;
                     yield return new WaitForSeconds(0.15f);
-                    GetComponent<SpriteRenderer>().color = oldColor;
+                    tmpSpriteRenderer.color = oldColor;
                     yield return new WaitForSeconds(0.15f);
                 }
                 modeBatTu = false;

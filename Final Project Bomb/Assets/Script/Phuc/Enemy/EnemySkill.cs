@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class EnemySkill : MonoBehaviour
 {
+    //
     public GameObject bulletPrefabs;
+    //
     public GameObject poisonAreaPrefabs;
+    //
+    public GameObject slashPrefabs;
+    public float slashDuration;
+    //
+    public GameObject slimeMobLarge;
+    public GameObject slimeMobSmall;
 
     public void playSkill (int type, Vector3 pos)
     {
-        if (type == 1)
+        if (type == 1) // Ban ra 4 tia ra 4 huong
         {
             createShoot(1, pos);
             createShoot(2, pos);
             createShoot(3, pos);
             createShoot(4, pos);
         }
-        if (type == 2)
+        if (type == 2) // Tao ra noi doc
         {
             createPoisonArea(pos);
         }
@@ -55,4 +63,41 @@ public class EnemySkill : MonoBehaviour
             movingBullet.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
     }
+
+    public void slash (int dir, Vector3 pos)
+    {
+        GameObject slashClone = Instantiate(slashPrefabs, pos, Quaternion.identity);
+        if (dir == 1) {
+            slashClone.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (dir == 2) {
+            slashClone.transform.rotation = Quaternion.Euler(0, 0, 90);
+        }
+        if (dir == 3) {
+            slashClone.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        if (dir == 4) {
+            slashClone.transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+        AnimationScript animationSlash = slashClone.GetComponent<AnimationScript>();
+        animationSlash.animationTime = slashDuration / animationSlash.animationSprites.Length;
+        animationSlash.idle = false;
+        Destroy(slashClone, slashDuration);
+    }
+
+    public void createSlimeMobLarge(Vector3 pos)
+    {
+        Instantiate(slimeMobLarge, pos, Quaternion.identity);
+    }
+
+    public void createSlimeMobSmall(Vector3 pos)
+    {
+        Instantiate(slimeMobSmall, pos, Quaternion.identity);
+    }
+    
+    public void createRectangleArea(Vector2 posFrom, Vector2 posTo, float width, float time)
+    {
+
+    }
+    
 }
