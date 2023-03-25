@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 
 using System.Linq;
 using System.Collections;
@@ -16,8 +16,11 @@ public class TilemapManager : MonoBehaviour
     private void Start()
     {
         levelIndex = dataLoad.levelMap;
+        if (levelIndex > 0)
         loadMap();
     }
+
+    #if UNITY_EDITOR
 
     public void saveMap()
     {
@@ -49,6 +52,8 @@ public class TilemapManager : MonoBehaviour
             }
         }
     }
+
+    #endif
 
     public void clearMap()
     {
@@ -95,8 +100,7 @@ public class TilemapManager : MonoBehaviour
     }
 }
 
-
-
+#if UNITY_EDITOR
 public static class ScriptableObjectUtility
 {
     public static void SaveLevelFile(ScriptableLevel level) 
@@ -106,5 +110,4 @@ public static class ScriptableObjectUtility
         AssetDatabase.Refresh();
     }
 }
-
 #endif
