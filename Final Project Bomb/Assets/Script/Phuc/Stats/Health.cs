@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     public float maxHealth;
     public GameObject deadAnimation;
     public float deadDuration = 1f;
+    public int dropMoney;
+
     private bool modeBatTu = false;
     private bool modeNoSlowDown = false;
     private bool modeNoTakeDamagePerSecond = false;
@@ -138,6 +140,10 @@ public class Health : MonoBehaviour
             animationScriptDead.enabled = true;
             animationScriptDead.animationTime = deadDuration / animationScriptDead.animationSprites.Length;
             animationScriptDead.idle = false;
+        }
+        for (int tmp = 0; tmp < dropMoney; tmp++)
+        {
+            
         }
     }
 }
