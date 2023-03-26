@@ -30,7 +30,7 @@ public class Reschangev3 : MonoBehaviour
     public void setres(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, false);
+        Screen.SetResolution(resolution.width, resolution.height,false);
     }
 
 }
