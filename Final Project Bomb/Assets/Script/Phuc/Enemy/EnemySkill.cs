@@ -14,6 +14,10 @@ public class EnemySkill : MonoBehaviour
     //
     public GameObject slimeMobLarge;
     public GameObject slimeMobSmall;
+    //
+    public GameObject bronzeCoinsPrefabs;
+    public GameObject silverCoinsPrefabs;
+    public GameObject goldCoinsPrefabs;
 
     public void playSkill (int type, Vector3 pos)
     {
@@ -93,6 +97,29 @@ public class EnemySkill : MonoBehaviour
     public void createSlimeMobSmall(Vector3 pos)
     {
         Instantiate(slimeMobSmall, pos, Quaternion.identity);
+    }
+
+    public void callCreateCoin (Vector3 pos)
+    {
+        StartCoroutine(createCoin(pos));
+    }
+
+    public IEnumerator createCoin(Vector3 pos)
+    {
+        int randomCoin = Random.Range(1, 4);
+        GameObject coinPrefab = null;
+        if (randomCoin == 1) {
+            coinPrefab = Instantiate(bronzeCoinsPrefabs, pos, Quaternion.identity);
+        } else if (randomCoin == 2) {
+            coinPrefab = Instantiate(silverCoinsPrefabs, pos, Quaternion.identity);
+        } else {
+            coinPrefab = Instantiate(goldCoinsPrefabs, pos, Quaternion.identity);
+        }
+        Vector2 force = new Vector2(1000 * Time.fixedDeltaTime * 5, 1000 * Time.fixedDeltaTime * 5);
+        Vector2 rotatedForce = Quaternion.AngleAxis(Random.Range(-360, 360), Vector3.forward) * force;
+        coinPrefab.GetComponent<Rigidbody2D>().AddForce(rotatedForce);
+        yield return new WaitForSeconds(0.2f);
+        coinPrefab.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
     
     public void createRectangleArea(Vector2 posFrom, Vector2 posTo, float width, float time)

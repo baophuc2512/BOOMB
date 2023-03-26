@@ -10,7 +10,10 @@ public class Health : MonoBehaviour
     public float maxHealth;
     public GameObject deadAnimation;
     public float deadDuration = 1f;
+
     public int dropMoney;
+    private EnemySkill enemySkill;
+
 
     private bool modeBatTu = false;
     private bool modeNoSlowDown = false;
@@ -19,11 +22,13 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
+        enemySkill = GameObject.Find("Manager").GetComponent<EnemySkill>();
         if (deadAnimation.GetComponent<AnimationScript>())
         {
             AnimationScript animationScriptDead = deadAnimation.GetComponent<AnimationScript>();
             animationScriptDead.enabled = false;
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -143,7 +148,7 @@ public class Health : MonoBehaviour
         }
         for (int tmp = 0; tmp < dropMoney; tmp++)
         {
-            
+            enemySkill.callCreateCoin(transform.position);
         }
     }
 }
