@@ -5,49 +5,112 @@ using UnityEngine;
 public class ApplyData : MonoBehaviour
 {
     public ScriptableData dataToLoad;
-    public GameObject playerOne;
-    public GameObject playerTwo;
-    public GameObject healthBarPlayerTwo;
+    public ScriptableMoney moneyToLoad;
+    private GameObject playerOne;
+    private GameObject playerTwo;
+    private GameObject healthBarPlayerTwo;
+    
+
+    [Header("Character Player 1")]
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private KeyCode inputMoveUp;
+    [SerializeField] private KeyCode inputMoveDown;
+    [SerializeField] private KeyCode inputMoveLeft;
+    [SerializeField] private KeyCode inputMoveRight;
+    [SerializeField] private KeyCode inputPlaceBomb;
+    [SerializeField] private List<Inventory> inventoryPlayerOne;
+
+    [Header("Character Player 2")]
+    [SerializeField] private bool havePlayerTwo;
+    [SerializeField] private float moveSpeedTwo;
+    [SerializeField] private int maxHealthTwo;
+    [SerializeField] private KeyCode inputMoveUpTwo;
+    [SerializeField] private KeyCode inputMoveDownTwo;
+    [SerializeField] private KeyCode inputMoveLeftTwo;
+    [SerializeField] private KeyCode inputMoveRightTwo;
+    [SerializeField] private KeyCode inputPlaceBombTwo;
+    [SerializeField] private List<Inventory> inventoryPlayerTwo;
+
+    [Header("In Game Setting")]
+    public int amountBombCanPlace;
+
+    [Header("Money")]
+    [SerializeField] private int currentMoney;
     
     private void Awake()
     {
-        if (GetComponent<MoveCharacter>()) 
-        {
-            playerOne.GetComponent<MoveCharacter>().inputDown = dataToLoad.inputMoveDown;
-            playerOne.GetComponent<MoveCharacter>().inputUp = dataToLoad.inputMoveUp;
-            playerOne.GetComponent<MoveCharacter>().inputLeft = dataToLoad.inputMoveLeft;
-            playerOne.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRight;
-        }
-        if (GetComponent<Health>()) 
-        {
-            playerOne.GetComponent<Health>().maxHealth = dataToLoad.maxHealth;
-            playerOne.GetComponent<Health>().currentHealth = dataToLoad.maxHealth;
-            playerOne.GetComponent<Health>().currentSpeed = dataToLoad.moveSpeed;
-        }
-        if (GetComponent<PlaceBomb>()) 
-        {
-            playerOne.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBomb;
-            playerOne.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
-        }
-        if (GetComponent<SelectItem>()) 
-        {
-            playerOne.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerOne;
-        }
+        getGameObject();
+        saveData();
+    }
+    /////////////// ---------------------TAKE FIRST DATA------------------------ \\\\\\\\\\\\\\\\\
 
-        if (dataToLoad.havePlayerTwo == true && playerTwo != null)
+    public void getGameObject()
+    {
+        playerOne = GameObject.Find("PlayerOne");
+        playerTwo = GameObject.Find("PlayerTwo");
+        healthBarPlayerTwo = GameObject.Find("HealthBarTwoPlayer");
+    }
+
+    public void loadData()
+    {
+        Debug.Log("Load Data");
+        if (playerOne != null)
+        {
+            dataToLoad.inputMoveDown = inputMoveDown;
+            dataToLoad.inputMoveUp = inputMoveUp;
+            dataToLoad.inputMoveLeft = inputMoveLeft;
+            dataToLoad.inputMoveRight = inputMoveRight;
+            dataToLoad.maxHealth = maxHealth;
+            dataToLoad.maxHealth = maxHealth;
+            dataToLoad.moveSpeed = moveSpeed;
+            dataToLoad.inputPlaceBomb = inputPlaceBomb;
+            dataToLoad.amountBombCanPlace = amountBombCanPlace;
+            dataToLoad.inventoryPlayerOne = inventoryPlayerOne;
+        }
+        dataToLoad.havePlayerTwo = havePlayerTwo;
+        if (havePlayerTwo == true && playerTwo != null)
         {
             playerTwo.SetActive(true);
             healthBarPlayerTwo.SetActive(true);
-            playerTwo.GetComponent<MoveCharacter>().inputDown = dataToLoad.inputMoveDownTwo;
-            playerTwo.GetComponent<MoveCharacter>().inputUp = dataToLoad.inputMoveUpTwo;
-            playerTwo.GetComponent<MoveCharacter>().inputLeft = dataToLoad.inputMoveLeftTwo;
-            playerTwo.GetComponent<MoveCharacter>().inputRight = dataToLoad.inputMoveRightTwo;
-            playerTwo.GetComponent<Health>().maxHealth = dataToLoad.maxHealthTwo;
-            playerTwo.GetComponent<Health>().currentHealth = dataToLoad.maxHealthTwo;
-            playerTwo.GetComponent<Health>().currentSpeed = dataToLoad.moveSpeed;
-            playerTwo.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBombTwo;
-            playerTwo.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
-            playerTwo.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerTwo;
+            dataToLoad.inputMoveDownTwo = inputMoveDownTwo;
+            dataToLoad.inputMoveUpTwo = inputMoveUpTwo;
+            dataToLoad.inputMoveLeftTwo = inputMoveLeftTwo;
+            dataToLoad.inputMoveRightTwo = inputMoveRightTwo;
+            dataToLoad.maxHealthTwo = maxHealthTwo;
+            dataToLoad.maxHealthTwo = maxHealthTwo;
+            dataToLoad.moveSpeedTwo = moveSpeedTwo;
+            dataToLoad.inputPlaceBombTwo = inputPlaceBombTwo;
+            dataToLoad.amountBombCanPlace = amountBombCanPlace;
+            dataToLoad.inventoryPlayerTwo = inventoryPlayerTwo;
         }
+        moneyToLoad.currentMoney = currentMoney;
+    }
+
+    public void saveData()
+    {
+        Debug.Log("Save Data");
+        inputMoveDown =  dataToLoad.inputMoveDown;
+        inputMoveUp = dataToLoad.inputMoveUp;
+        inputMoveLeft = dataToLoad.inputMoveLeft;
+        inputMoveRight = dataToLoad.inputMoveRight;
+        maxHealth = dataToLoad.maxHealth;
+        maxHealth = dataToLoad.maxHealth;
+        moveSpeed = dataToLoad.moveSpeed;
+        inputPlaceBomb = dataToLoad.inputPlaceBomb;
+        amountBombCanPlace = dataToLoad.amountBombCanPlace;
+        inventoryPlayerOne = dataToLoad.inventoryPlayerOne;
+        havePlayerTwo = dataToLoad.havePlayerTwo;
+        inputMoveDownTwo = dataToLoad.inputMoveDownTwo;
+        inputMoveUpTwo = dataToLoad.inputMoveUpTwo;
+        inputMoveLeftTwo = dataToLoad.inputMoveLeftTwo;
+        inputMoveRightTwo = dataToLoad.inputMoveRightTwo;
+        maxHealthTwo = dataToLoad.maxHealthTwo;
+        maxHealthTwo = dataToLoad.maxHealthTwo;
+        moveSpeedTwo = dataToLoad.moveSpeedTwo;
+        inputPlaceBombTwo = dataToLoad.inputPlaceBombTwo;
+        amountBombCanPlace = dataToLoad.amountBombCanPlace;
+        inventoryPlayerTwo = dataToLoad.inventoryPlayerTwo;
+        currentMoney = moneyToLoad.currentMoney;
     }
 }

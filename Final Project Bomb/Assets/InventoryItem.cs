@@ -29,7 +29,7 @@ public class InventoryItem : MonoBehaviour
     public void hightLightDo(int currentHightLight)
     {
         for (int tmp = 0; tmp < hightlights.Count;++tmp)
-            {
+        {
             hightlights[tmp].transform.gameObject.SetActive(false);
         }
         

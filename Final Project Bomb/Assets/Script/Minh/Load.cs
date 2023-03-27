@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Load : MonoBehaviour
 {
+    public bool wantToSave = false;
+
     public void LoadScene(int sceneId)
     {
         StartCoroutine(LoadSceneAsync(sceneId));
@@ -13,7 +15,12 @@ public class Load : MonoBehaviour
 
     IEnumerator LoadSceneAsync(int sceneId)
     {
+        if (wantToSave == true)
+        {
+            GameObject.Find("SaveDataBetweenScene").GetComponent<ApplyData>().saveData();
+        }
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneId);
+        GameObject.Find("SaveDataBetweenScene").GetComponent<ApplyData>().loadData();
 
 
         yield return null;

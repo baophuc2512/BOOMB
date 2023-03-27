@@ -123,6 +123,84 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &215526121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215526124}
+  - component: {fileID: 215526123}
+  - component: {fileID: 215526122}
+  m_Layer: 0
+  m_Name: SaveDataBetweenScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &215526122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215526121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd94bb79315911648835506bfdf49ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataToLoad: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
+  moneyToLoad: {fileID: 11400000, guid: 345a97f40ecd9d5489a09b083ff8e599, type: 2}
+  moveSpeed: 0
+  maxHealth: 0
+  inputMoveUp: 0
+  inputMoveDown: 0
+  inputMoveLeft: 0
+  inputMoveRight: 0
+  inputPlaceBomb: 0
+  inventoryPlayerOne: []
+  havePlayerTwo: 0
+  moveSpeedTwo: 0
+  maxHealthTwo: 0
+  inputMoveUpTwo: 0
+  inputMoveDownTwo: 0
+  inputMoveLeftTwo: 0
+  inputMoveRightTwo: 0
+  inputPlaceBombTwo: 0
+  inventoryPlayerTwo: []
+  amountBombCanPlace: 0
+  currentMoney: 0
+--- !u!114 &215526123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215526121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676d3d31d5455f24f9f41a0ca5ad4eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &215526124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215526121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &219015088
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f42f06794968c42a8c1b94e6674add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wantToSave: 1
 --- !u!114 &1005751134
 MonoBehaviour:
   m_ObjectHideFlags: 0

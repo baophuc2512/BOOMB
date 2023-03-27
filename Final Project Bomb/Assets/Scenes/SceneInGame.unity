@@ -10222,6 +10222,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477104548}
   m_CullTransparentMesh: 1
+--- !u!1 &498678133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498678136}
+  - component: {fileID: 498678135}
+  - component: {fileID: 498678134}
+  m_Layer: 0
+  m_Name: SaveDataBetweenScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &498678134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498678133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd94bb79315911648835506bfdf49ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataToLoad: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
+  moneyToLoad: {fileID: 11400000, guid: 345a97f40ecd9d5489a09b083ff8e599, type: 2}
+  moveSpeed: 0
+  maxHealth: 0
+  inputMoveUp: 0
+  inputMoveDown: 0
+  inputMoveLeft: 0
+  inputMoveRight: 0
+  inputPlaceBomb: 0
+  inventoryPlayerOne: []
+  havePlayerTwo: 0
+  moveSpeedTwo: 0
+  maxHealthTwo: 0
+  inputMoveUpTwo: 0
+  inputMoveDownTwo: 0
+  inputMoveLeftTwo: 0
+  inputMoveRightTwo: 0
+  inputPlaceBombTwo: 0
+  inventoryPlayerTwo: []
+  amountBombCanPlace: 0
+  currentMoney: 0
+--- !u!114 &498678135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498678133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676d3d31d5455f24f9f41a0ca5ad4eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &498678136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498678133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515252741
 GameObject:
   m_ObjectHideFlags: 0
@@ -10314,6 +10392,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10336,7 +10415,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 854157cc3ae184842954d17a102861f9, type: 3}
   m_Name: 
@@ -10370,7 +10449,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5.2120204
   m_Depth: -1
   m_CullingMask:
@@ -10402,6 +10481,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bded68cff80db004caba9b1aa6c51f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: -10}
+  smoothTime: 1
+  minZoom: 160
+  maxZoom: 60
+  zoomLimiter: 100
 --- !u!1001 &573085138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13098,6 +13194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f42f06794968c42a8c1b94e6674add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wantToSave: 0
 --- !u!114 &1644423836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13150,10 +13247,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hightlights:
   - {fileID: 1548000293}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1319663826}
+  - {fileID: 1206052239}
+  - {fileID: 305236592}
+  - {fileID: 1623055940}
   player: {fileID: 1741838933}
   InvData: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
 --- !u!114 &1644423840
@@ -14397,9 +14494,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2139625279}
   - component: {fileID: 2139625280}
-  - component: {fileID: 2139625281}
   - component: {fileID: 2139625282}
   - component: {fileID: 2139625283}
+  - component: {fileID: 2139625284}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -14440,22 +14537,6 @@ MonoBehaviour:
   enemySpawnMap: {fileID: 1795199686}
   levelIndex: 10
   dataLoad: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
---- !u!114 &2139625281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139625278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd94bb79315911648835506bfdf49ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataToLoad: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  playerOne: {fileID: 1741838933}
-  playerTwo: {fileID: 2101766509}
-  healthBarPlayerTwo: {fileID: 588780260}
 --- !u!114 &2139625282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14492,6 +14573,19 @@ MonoBehaviour:
   enemySpawnMap: {fileID: 1795199686}
   enemyCarrotPrefab: {fileID: 7354962590599053444, guid: dc1d7901583829541b7c8ee60061f222, type: 3}
   enemyOnionPrefab: {fileID: 2723203892908040757, guid: 16edec696bb1e6c44b3dd208d098e32c, type: 3}
+--- !u!114 &2139625284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139625278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c59316466813d4f80c6d586b2f1bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataToLoad: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
 --- !u!1001 &2723203893535427417
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class LevelInteract : MonoBehaviour, InterfaceInteract
 
     public void Interact()
     {
+        // Code gi do trong day
         mainDataBattle.levelMap = levelMap;
         SceneManager.LoadScene("SceneInGame");
     }
