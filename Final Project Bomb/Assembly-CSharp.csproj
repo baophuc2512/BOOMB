@@ -62,6 +62,7 @@
     <Compile Include="Assets\InventoryItem.cs" />
     <Compile Include="Assets\EscPause.cs" />
     <Compile Include="Assets\Script\Phuc\Stats\DealDamage.cs" />
+    <Compile Include="Assets\coinsscript.cs" />
     <Compile Include="Assets\Script\Phuc\SkillBoss.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\InterfaceInteract.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyOnionMovement.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Script\Phuc\TilemapManager.cs" />
     <Compile Include="Assets\Script\Phuc\ScriptableLevel.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\TeleportGateInteract.cs" />
+    <Compile Include="Assets\Script\Minh\Fullsceen.cs" />
     <Compile Include="Assets\Script\Phuc\AnimationScript.cs" />
     <Compile Include="Assets\Reschangev2.cs" />
     <Compile Include="Assets\Script\Phuc\CreateItem.cs" />
@@ -112,8 +114,6 @@
     <Compile Include="Assets\Script\Phuc\Interact\PlayerInteractUI.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\coinsscript.cs" />
-    <Compile Include="Assets\Script\Minh\Fullsceen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

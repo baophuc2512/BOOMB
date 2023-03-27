@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 59442013}
   - component: {fileID: 59442012}
   m_Layer: 5
-  m_Name: Keyleft
+  m_Name: Keyleft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,9 +543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player1
-
-'
+  m_Text: Player1
 --- !u!222 &466340503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -868,7 +866,7 @@ GameObject:
   - component: {fileID: 743473983}
   - component: {fileID: 743473982}
   m_Layer: 5
-  m_Name: Keyright
+  m_Name: Keyright2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1932,6 +1930,10 @@ GameObject:
   - component: {fileID: 1085290821}
   - component: {fileID: 1085290820}
   - component: {fileID: 1085290823}
+  - component: {fileID: 1085290827}
+  - component: {fileID: 1085290826}
+  - component: {fileID: 1085290825}
+  - component: {fileID: 1085290824}
   m_Layer: 0
   m_Name: Game manager
   m_TagString: Untagged
@@ -2018,6 +2020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
   currentText: {fileID: 830512493}
+  Playertext: {fileID: 466340502}
 --- !u!114 &1085290820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2032,6 +2035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
   currentText: {fileID: 537049769}
+  Playertext: {fileID: 466340502}
 --- !u!114 &1085290821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2046,6 +2050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
   currentText: {fileID: 1150261480}
+  Playertext: {fileID: 466340502}
 --- !u!114 &1085290822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,6 +2065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
   currentText: {fileID: 1077637433}
+  Playertext: {fileID: 466340502}
 --- !u!114 &1085290823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2072,6 +2078,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffce362f9f49c9049985cc9d462185f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1085290824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085290813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d43c4824d3bd14f93615ed1cc8fb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
+  currentText: {fileID: 1751165246}
+  Playertext: {fileID: 1232911173}
+--- !u!114 &1085290825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085290813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d43c4824d3bd14f93615ed1cc8fb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
+  currentText: {fileID: 1147843673}
+  Playertext: {fileID: 1232911173}
+--- !u!114 &1085290826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085290813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d43c4824d3bd14f93615ed1cc8fb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
+  currentText: {fileID: 743473983}
+  Playertext: {fileID: 1232911173}
+--- !u!114 &1085290827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085290813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d43c4824d3bd14f93615ed1cc8fb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
+  currentText: {fileID: 59442013}
+  Playertext: {fileID: 1232911173}
 --- !u!1 &1147843670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,7 +2151,7 @@ GameObject:
   - component: {fileID: 1147843673}
   - component: {fileID: 1147843672}
   m_Layer: 5
-  m_Name: Keydown
+  m_Name: Keydown2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2440,7 +2506,7 @@ GameObject:
   - component: {fileID: 1232911174}
   - component: {fileID: 1232911173}
   m_Layer: 5
-  m_Name: Player1
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2499,9 +2565,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player2
-
-'
+  m_Text: Player2
 --- !u!222 &1232911174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3348,7 +3412,7 @@ GameObject:
   - component: {fileID: 1751165246}
   - component: {fileID: 1751165245}
   m_Layer: 5
-  m_Name: Keyup
+  m_Name: Keyup2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
