@@ -300,11 +300,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3608796889162479766}
+  deadAnimation: {fileID: 3608796889537800296}
+  deadDuration: 1
   currentHealth: 200
   currentSpeed: 10
   maxHealth: 200
-  deadAnimation: {fileID: 3608796889537800296}
-  deadDuration: 1
+  enemySpawnPrefab: {fileID: 0}
+  numberSpawnEnemy: 0
+  dropMoney: 0
 --- !u!114 &3608796889537800294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +325,7 @@ MonoBehaviour:
     m_Bits: 64
   movePoint: {fileID: 3608796889608996081}
   detectRange: 10
-  stunTime: 0
+  spawnStonePrefab: {fileID: 7412508808674287008, guid: c94898f2c3cde7142b6c4d57448bcf30, type: 3}
 --- !u!1 &3608796889608996080
 GameObject:
   m_ObjectHideFlags: 0

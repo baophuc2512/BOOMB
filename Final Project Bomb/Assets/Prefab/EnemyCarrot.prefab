@@ -354,11 +354,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7354962590599053444}
+  deadAnimation: {fileID: 7354962591078354976}
+  deadDuration: 1
   currentHealth: 100
   currentSpeed: 0
   maxHealth: 100
-  deadAnimation: {fileID: 7354962591078354976}
-  deadDuration: 1
+  enemySpawnPrefab: {fileID: 0}
+  numberSpawnEnemy: 0
+  dropMoney: 5
 --- !u!1 &7354962591597284867
 GameObject:
   m_ObjectHideFlags: 0

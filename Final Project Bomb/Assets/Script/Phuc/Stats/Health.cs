@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [Header("Need To Run Code")]
     public GameObject player;
+    public GameObject deadAnimation;
+    public float deadDuration = 1f;
+    [Header("Stats")]
     public float currentHealth;
     public float currentSpeed;
     public float maxHealth;
-    public GameObject deadAnimation;
-    public float deadDuration = 1f;
-
+    [Header("Spawn Enemy")]
+    public GameObject enemySpawnPrefab;
+    public int numberSpawnEnemy;
+    [Header("Money")]
     public int dropMoney;
     private EnemySkill enemySkill;
 
@@ -136,6 +141,11 @@ public class Health : MonoBehaviour
     public void dead() 
     {
         Destroy(player, deadDuration);
+        if (enemySpawnPrefab != null) 
+        {
+            for (int tmp = 0; tmp < numberSpawnEnemy; tmp++)
+            enemySkill.spawnEnemy(transform.position, enemySpawnPrefab);
+        }
         if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = false;
         if (GetComponent<SpriteRenderer>()) GetComponent<SpriteRenderer>().enabled = false;
         if (GetComponent<PlaceBomb>()) GetComponent<PlaceBomb>().enabled = false;

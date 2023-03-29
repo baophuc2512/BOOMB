@@ -68,11 +68,9 @@
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyOnionMovement.cs" />
     <Compile Include="Assets\Script\Minh\LoadnewScene.cs" />
     <Compile Include="Assets\Script\Phuc\Stats\Health.cs" />
-    <Compile Include="Assets\Script\Phuc\CameraFollowMultiplePlayer.cs" />
     <Compile Include="Assets\Script\Phuc\ItemPickup.cs" />
     <Compile Include="Assets\Script\Phuc\LevelTile.cs" />
     <Compile Include="Assets\Script\Minh\DeathTriggeredPanel.cs" />
-    <Compile Include="Assets\Script\Phuc\DontDestroy.cs" />
     <Compile Include="Assets\Script\Phuc\TilemapManagerEditor.cs" />
     <Compile Include="Assets\Script\Phuc\PickUpCoin.cs" />
     <Compile Include="Assets\Pickmap.cs" />
@@ -97,7 +95,6 @@
     <Compile Include="Assets\Script\Phuc\Interact\DialogueInteract.cs" />
     <Compile Include="Assets\Script\Phuc\TilemapManager.cs" />
     <Compile Include="Assets\Script\Phuc\ScriptableLevel.cs" />
-    <Compile Include="Assets\Script\Phuc\GetDataFromSO.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\TeleportGateInteract.cs" />
     <Compile Include="Assets\Script\Minh\Fullsceen.cs" />
     <Compile Include="Assets\Script\Phuc\AnimationScript.cs" />
@@ -117,8 +114,6 @@
     <Compile Include="Assets\Script\Phuc\Interact\PlayerInteractUI.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\Inventory2Item.cs" />
-    <Compile Include="Assets\Invenscript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -12,12 +12,14 @@ public class EnemySkill : MonoBehaviour
     public GameObject slashPrefabs;
     public float slashDuration;
     //
-    public GameObject slimeMobLarge;
-    public GameObject slimeMobSmall;
-    //
     public GameObject bronzeCoinsPrefabs;
     public GameObject silverCoinsPrefabs;
     public GameObject goldCoinsPrefabs;
+    //
+    public GameObject skillRangeSquarePrefabs;
+    public GameObject skillRangeCirclePrefabs;
+    //
+    public GameObject explosionPrefabs;
 
     public void playSkill (int type, Vector3 pos)
     {
@@ -89,16 +91,6 @@ public class EnemySkill : MonoBehaviour
         Destroy(slashClone, slashDuration);
     }
 
-    public void createSlimeMobLarge(Vector3 pos)
-    {
-        Instantiate(slimeMobLarge, pos, Quaternion.identity);
-    }
-
-    public void createSlimeMobSmall(Vector3 pos)
-    {
-        Instantiate(slimeMobSmall, pos, Quaternion.identity);
-    }
-
     public void callCreateCoin (Vector3 pos)
     {
         StartCoroutine(createCoin(pos));
@@ -121,10 +113,30 @@ public class EnemySkill : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         coinPrefab.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
+
+    public void spawnEnemy(Vector3 pos, GameObject enemyPrefab)
+    {
+        Instantiate(enemyPrefab, pos, Quaternion.identity);
+    }
     
     public void createRectangleArea(Vector2 posFrom, Vector2 posTo, float width, float time)
     {
-
     }
     
+    public void createCircleArea(Vector2 pos, float radius, float time)
+    {
+        GameObject damageArea = Instantiate(skillRangeSquarePrefabs, pos, Quaternion.identity);
+        damageArea.transform.localScale = new Vector3(radius, radius, 0);
+        Destroy(damageArea, time);
+    }
+    
+    public void buffaloHitWall(Vector2 pos, float explosionDuration)
+    {
+        GameObject explosionClone = Instantiate(explosionPrefabs, pos, Quaternion.identity);
+        AnimationScript animationExplosion = explosionClone.GetComponent<AnimationScript>();
+        animationExplosion.animationTime = explosionDuration / animationExplosion.animationSprites.Length;
+        animationExplosion.idle = false;
+        Destroy(explosionClone, explosionDuration);
+    }
+
 }

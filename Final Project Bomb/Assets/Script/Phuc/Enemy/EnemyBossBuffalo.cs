@@ -10,10 +10,11 @@ public class EnemyBossBuffalo : MonoBehaviour
     private bool attackState = false;
     private Transform attackTarget;
     private int currentPhase;
+    private Vector2 lastVelocity;
     public LayerMask wallLayer;
     public Transform movePoint;
     public float detectRange;
-    public float stunTime;
+    public GameObject spawnStonePrefab;
 
     private void Awake()
     {
@@ -24,7 +25,8 @@ public class EnemyBossBuffalo : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(setDirection());
+        changePhase(1);
+        StartCoroutine(checkHealthTurnPhase(50f, 2));
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -33,6 +35,11 @@ public class EnemyBossBuffalo : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, 0f);
             StartCoroutine(takeStunTime());
+            enemySkill.buffaloHitWall(transform.position, 2f);
+
+            var speed = lastVelocity.magnitude;
+            var direction = Vector3.Reflect(lastVelocity.normalized, col.contacts[0].normal);
+            rb.velocity = direction * Mathf.Max(speed / 100, 0f);
         }
     }
 
@@ -52,9 +59,10 @@ public class EnemyBossBuffalo : MonoBehaviour
         attackState = false;
     }
 
-    public IEnumerator setDirection()
+    public IEnumerator setDirection(int type)
     {
-        while (true)
+        // ---------------- PHASE 1
+        while (type == 1 && currentPhase == 1)
         {
             attackTarget = findNearestPlayer();
             if (attackTarget != null)
@@ -68,6 +76,55 @@ public class EnemyBossBuffalo : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.1f);
             }
+        }
+        // ---------------- PHASE 2
+        while (type == 2 && currentPhase == 2)
+        {
+            if (Random.Range(1, 3) == 1)
+            {
+                attackTarget = findNearestPlayer();
+                if (attackTarget != null)
+                {
+                    attackState = true;
+                    Vector2 moveDirection = (attackTarget.position - transform.position).normalized * health.currentSpeed;
+                    rb.velocity = new Vector2 (moveDirection.x, moveDirection.y);
+                }
+                yield return new WaitForSeconds(2f);
+            } else {
+                attackTarget = findNearestPlayer();
+                if (attackTarget != null)
+                {
+                    Vector3 tmpPosition = attackTarget.position;
+                    attackState = true;
+                    enemySkill.createCircleArea(tmpPosition, 2f, 1.5f);
+                    yield return new WaitForSeconds(1.5f);
+                    if (spawnStonePrefab != null) Instantiate(spawnStonePrefab, tmpPosition, Quaternion.identity);
+                    attackState = false;
+                }
+            }
+            while (attackState == true)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+    }
+
+    public void changePhase(int phaseToChange)
+    {
+        currentPhase = phaseToChange;
+        StartCoroutine(setDirection(phaseToChange));
+    }
+
+    public IEnumerator checkHealthTurnPhase(float percentHealth, int phaseToChange)
+    {
+        while (true)
+        {
+            if (health.currentHealth / health.maxHealth <= percentHealth / 100f)
+            {
+                changePhase(phaseToChange);
+                break;
+            }
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
