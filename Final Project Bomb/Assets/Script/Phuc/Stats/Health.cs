@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
     [Header("Need To Run Code")]
     public GameObject player;
     public GameObject deadAnimation;
+    public GameObject moveLeft;
+    public GameObject moveRight;
     public float deadDuration = 1f;
     [Header("Stats")]
     public float currentHealth;
@@ -65,8 +67,18 @@ public class Health : MonoBehaviour
                 for (int tmp = 0; tmp <= 5; tmp++)
                 {
                     tmpSpriteRenderer.color = Color.white;
+                    if (moveLeft != null && moveRight != null)
+                    {
+                        moveLeft.GetComponent<SpriteRenderer>().color = Color.white;
+                        moveRight.GetComponent<SpriteRenderer>().color = Color.white;
+                    }
                     yield return new WaitForSeconds(0.15f);
                     tmpSpriteRenderer.color = oldColor;
+                    if (moveLeft != null && moveRight != null)
+                    {
+                        moveLeft.GetComponent<SpriteRenderer>().color = oldColor;
+                        moveRight.GetComponent<SpriteRenderer>().color = oldColor;
+                    }
                     yield return new WaitForSeconds(0.15f);
                 }
                 modeBatTu = false;
@@ -124,8 +136,18 @@ public class Health : MonoBehaviour
                 for (int tmp = 0; tmp <= time/0.15f; tmp++)
                 {
                     GetComponent<SpriteRenderer>().color = Color.yellow;
+                    if (moveLeft != null && moveRight != null)
+                    {
+                        moveLeft.GetComponent<SpriteRenderer>().color = Color.yellow;
+                        moveRight.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    }
                     yield return new WaitForSeconds(0.15f);
                     GetComponent<SpriteRenderer>().color = oldColor;
+                    if (moveLeft != null && moveRight != null)
+                    {
+                        moveLeft.GetComponent<SpriteRenderer>().color = oldColor;
+                        moveRight.GetComponent<SpriteRenderer>().color = oldColor;
+                    }
                     yield return new WaitForSeconds(0.15f);
                 }
                 if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = true;
@@ -149,6 +171,8 @@ public class Health : MonoBehaviour
         if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = false;
         if (GetComponent<SpriteRenderer>()) GetComponent<SpriteRenderer>().enabled = false;
         if (GetComponent<PlaceBomb>()) GetComponent<PlaceBomb>().enabled = false;
+        if (moveLeft != null) moveLeft.GetComponent<AnimationScript>().enabled = false;
+        if (moveRight != null) moveRight.GetComponent<AnimationScript>().enabled = false;
         if (deadAnimation.GetComponent<AnimationScript>())
         {
             AnimationScript animationScriptDead = deadAnimation.GetComponent<AnimationScript>();

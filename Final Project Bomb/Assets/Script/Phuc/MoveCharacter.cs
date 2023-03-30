@@ -15,6 +15,9 @@ public class MoveCharacter : MonoBehaviour
     public KeyCode inputRight = KeyCode.D;
     [Header("Animation")]
     public GameObject player;
+    public AnimationScript moveLeft;
+    public AnimationScript moveRight;
+    private SpriteRenderer spriteRenderer;
     private int directionX = 0;
     private int directionY = 0;
     
@@ -22,6 +25,7 @@ public class MoveCharacter : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         health = GetComponent<Health>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update() 
@@ -29,22 +33,37 @@ public class MoveCharacter : MonoBehaviour
         if (Input.GetKey(inputUp)) {
             directionX = 0;
             directionY = 1;
+            moveLeft.enabled = true;
+            moveRight.enabled = false;
+            spriteRenderer.enabled = false;
         }
         else if (Input.GetKey(inputDown)) {
             directionX = 0;
             directionY = -1;
+            moveLeft.enabled = false;
+            moveRight.enabled = true;
+            spriteRenderer.enabled = false;
         }
         else if (Input.GetKey(inputLeft)) {
             directionX = -1;
             directionY = 0;
+            moveLeft.enabled = false;
+            moveRight.enabled = true;
+            spriteRenderer.enabled = false;
         }
         else if (Input.GetKey(inputRight)) {
             directionX = 1;
             directionY = 0;
+            moveLeft.enabled = true;
+            moveRight.enabled = false;
+            spriteRenderer.enabled = false;
         }
         else {
             directionX = 0;
             directionY = 0;
+            moveLeft.enabled = false;
+            moveRight.enabled = false;
+            spriteRenderer.enabled = true;
         }
     }
     private void FixedUpdate() 

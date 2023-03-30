@@ -59,6 +59,7 @@ public class PlaceBomb : MonoBehaviour
         GameObject bombClone = Instantiate(bombPrefabs, new Vector2(position.x, position.y), Quaternion.identity);
         amountBomb--;
         numberBomb--;
+        GetComponent<SelectItem>().loadInfo();
 
         yield return new WaitForSeconds(timeBombExplose);
 
