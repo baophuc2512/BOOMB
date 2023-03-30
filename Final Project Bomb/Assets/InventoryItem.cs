@@ -12,6 +12,7 @@ public class InventoryItem : MonoBehaviour
         Time.timeScale = 1;
     }
     public List<Image> hightlights;
+    public List<Text> Chu;
     public GameObject player;
     private SelectItem selectItem;
     public ScriptableData InvData;
@@ -24,6 +25,10 @@ public class InventoryItem : MonoBehaviour
     {
         
         hightLightDo(selectItem.currentSelectItem);
+        for (int i =0;i< selectItem.inventory.Count;i++)
+        {
+            Chu[i].text = selectItem.inventory[i].numberBomb.ToString();
+        }
     }
 
     public void hightLightDo(int currentHightLight)

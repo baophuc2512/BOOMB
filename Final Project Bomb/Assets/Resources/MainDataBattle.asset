@@ -22,13 +22,13 @@ MonoBehaviour:
   inventoryPlayerOne:
   - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
     typeBomb: 1
-    numberBomb: 95
+    numberBomb: 123
   - prefab: {fileID: 6106114448578197213, guid: 3d2defe2ec89abe4fa1bd45343dcc49b, type: 3}
     typeBomb: 2
-    numberBomb: 98
+    numberBomb: 113
   - prefab: {fileID: 4735137899569904643, guid: 410ee18664c74564db40b41920ca555f, type: 3}
     typeBomb: 3
-    numberBomb: 96
+    numberBomb: 108
   havePlayerTwo: 1
   moveSpeedTwo: 5
   maxHealthTwo: 200
@@ -40,13 +40,13 @@ MonoBehaviour:
   inventoryPlayerTwo:
   - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
     typeBomb: 1
-    numberBomb: 98
+    numberBomb: 123
   - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
-    typeBomb: 1
-    numberBomb: 98
+    typeBomb: 2
+    numberBomb: 116
   - prefab: {fileID: 3577100957805142216, guid: 916f3c5f438cf14489a72123ae033cb8, type: 3}
-    typeBomb: 1
-    numberBomb: 98
+    typeBomb: 3
+    numberBomb: 112
   amountBombCanPlace: 2
   levelMap: 10
   enemys: []

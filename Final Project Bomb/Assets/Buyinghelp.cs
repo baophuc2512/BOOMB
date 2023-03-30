@@ -8,6 +8,7 @@ public class Buyinghelp : MonoBehaviour
     public ScriptableData BombData;
     public ScriptableMoney Moneyyy;
     public List<Text> TextBombs;
+    public List<Text> TextBombs2;
    
     void Start()
     {
@@ -16,7 +17,13 @@ public class Buyinghelp : MonoBehaviour
             TextBombs[i].text= BombData.inventoryPlayerOne[i].numberBomb.ToString();
             
         }
-           
+        for (int i = 0; i < BombData.inventoryPlayerOne.Count; i++)
+        {
+            TextBombs2[i].text = BombData.inventoryPlayerTwo[i].numberBomb.ToString();
+
+        }
+
+
     }
     void Update()
     {
@@ -24,6 +31,11 @@ public class Buyinghelp : MonoBehaviour
         {
             TextBombs[i].text = BombData.inventoryPlayerOne[i].numberBomb.ToString();
             
+        }
+        for (int i = 0; i < BombData.inventoryPlayerOne.Count; i++)
+        {
+            TextBombs2[i].text = BombData.inventoryPlayerTwo[i].numberBomb.ToString();
+
         }
     }
 }
