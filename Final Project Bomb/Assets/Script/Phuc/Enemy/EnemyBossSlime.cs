@@ -77,7 +77,7 @@ public class EnemyBossSlime : MonoBehaviour
             }
             Transform target = findNearestPlayer();
             yield return new WaitForSeconds(1f);
-            if (target != null) transform.position = target.position;
+            if (target != null) transform.position = target.position + new Vector3(0.5f, 0.5f, 0);
 
             Vector2 force = new Vector2(1000 * Time.fixedDeltaTime * health.currentSpeed, 1000 * Time.fixedDeltaTime * health.currentSpeed);
             Vector2 rotatedForce = Quaternion.AngleAxis(Random.Range(-360, 360), Vector3.forward) * force;
@@ -102,7 +102,7 @@ public class EnemyBossSlime : MonoBehaviour
             }
             Transform target = findNearestPlayer();
             yield return new WaitForSeconds(1f);
-            if (target != null) transform.position = target.position;
+            if (target != null) transform.position = target.position + new Vector3(0.5f, 0.5f, 0);
             enemySkill.playSkill(1, transform.position);
 
             Vector2 force = new Vector2(1000 * Time.fixedDeltaTime * health.currentSpeed, 1000 * Time.fixedDeltaTime * health.currentSpeed);

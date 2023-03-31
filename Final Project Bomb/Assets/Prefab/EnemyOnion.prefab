@@ -450,7 +450,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 58b983fa7f87af547b39b723eceb5279, type: 3}
   m_Color: {r: 1, g: 0, b: 0.80241585, a: 1}
   m_FlipX: 0
@@ -548,6 +548,7 @@ MonoBehaviour:
   enemySpawnPrefab: {fileID: 0}
   numberSpawnEnemy: 0
   dropMoney: 5
+  animationToTurnOff: {fileID: 0}
 --- !u!1 &2723203893631543290
 GameObject:
   m_ObjectHideFlags: 0
