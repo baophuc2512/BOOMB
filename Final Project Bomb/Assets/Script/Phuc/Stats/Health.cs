@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
     [Header("Money")]
     public int dropMoney;
     private EnemySkill enemySkill;
+    public GameObject animationToTurnOff;
 
 
     private bool modeBatTu = false;
@@ -66,11 +67,11 @@ public class Health : MonoBehaviour
                 Color oldColor = tmpSpriteRenderer.color;
                 for (int tmp = 0; tmp <= 5; tmp++)
                 {
-                    tmpSpriteRenderer.color = Color.white;
+                    tmpSpriteRenderer.color = Color.red;
                     if (moveLeft != null && moveRight != null)
                     {
-                        moveLeft.GetComponent<SpriteRenderer>().color = Color.white;
-                        moveRight.GetComponent<SpriteRenderer>().color = Color.white;
+                        moveLeft.GetComponent<SpriteRenderer>().color = Color.red;
+                        moveRight.GetComponent<SpriteRenderer>().color = Color.red;
                     }
                     yield return new WaitForSeconds(0.15f);
                     tmpSpriteRenderer.color = oldColor;
@@ -168,6 +169,7 @@ public class Health : MonoBehaviour
             for (int tmp = 0; tmp < numberSpawnEnemy; tmp++)
             enemySkill.spawnEnemy(transform.position, enemySpawnPrefab);
         }
+        if (animationToTurnOff != null && animationToTurnOff.GetComponent<AnimationScript>() != null) animationToTurnOff.GetComponent<AnimationScript>().enabled = false;
         if (GetComponent<MoveCharacter>()) GetComponent<MoveCharacter>().enabled = false;
         if (GetComponent<SpriteRenderer>()) GetComponent<SpriteRenderer>().enabled = false;
         if (GetComponent<PlaceBomb>()) GetComponent<PlaceBomb>().enabled = false;

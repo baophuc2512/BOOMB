@@ -17,6 +17,9 @@ public class PlaceBomb : MonoBehaviour
 
     [Header("Explose")]
     public GameObject explosionPrefabs;
+    public GameObject explosionPrefabsStun;
+    public GameObject explosionPrefabsSlow;
+    public GameObject explosionPrefabsPoison;
     public LayerMask wallLayer;
     public LayerMask bombLayer;
     public int explosionRadius = 2;
@@ -41,6 +44,7 @@ public class PlaceBomb : MonoBehaviour
             }
         }
         // An no bom hen gio (type 4)
+        /*
         if (Input.GetKeyDown(inputPlaceBomb) && keyPlaceBomb == false) 
         {
             Vector2 positionBomb = new Vector2(bombHenGio.transform.position.x, bombHenGio.transform.position.y);
@@ -51,6 +55,7 @@ public class PlaceBomb : MonoBehaviour
             exploseBomb(positionBomb);
             keyPlaceBomb = true;
         }
+        */
     }
 
     public IEnumerator placeBomb(Vector2 position, float timeBombExplose, int typePlaceBomb) 
@@ -77,41 +82,38 @@ public class PlaceBomb : MonoBehaviour
         switch (typePlaceBomb)
         {
             case 1:
-                exploseBomb(positionBomb);
-                break;
-            case 2:
-                exploseBomb2(positionBomb);
+                exploseBomb(positionBomb, explosionPrefabs);
                 break;
             case 3:
-                exploseBomb(positionBomb);
-                yield return new WaitForSeconds(0.5f);
-                exploseBomb2(positionBomb);
+                exploseBomb(positionBomb, explosionPrefabsPoison);
+                break;
+            case 2:
+                exploseBomb(positionBomb, explosionPrefabsSlow);
                 break;
             case 4:
-                bombHenGio = bombClone;
-                keyPlaceBomb = false;
+                exploseBomb(positionBomb, explosionPrefabsStun);
                 break;
         }
     } 
 
     // ---------------------------------------------------- BOMB ------------------------------------- \\
 
-    public void exploseBomb(Vector2 positionExplose)
+    public void exploseBomb(Vector2 positionExplose, GameObject prefabs)
     {
-        createExplose(positionExplose);
-        createExploseLine(1, 0, positionExplose, true);
-        createExploseLine(-1, 0, positionExplose, true);
-        createExploseLine(0, 1, positionExplose, true);
-        createExploseLine(0, -1, positionExplose, true);
+        createExplose(positionExplose, prefabs);
+        createExploseLine(1, 0, positionExplose, true, prefabs);
+        createExploseLine(-1, 0, positionExplose, true, prefabs);
+        createExploseLine(0, 1, positionExplose, true, prefabs);
+        createExploseLine(0, -1, positionExplose, true, prefabs);
     }
 
-    public void exploseBomb2(Vector2 positionExplose)
+    public void exploseBomb2(Vector2 positionExplose, GameObject prefabs)
     {
-        createExplose(positionExplose);
-        createExploseLine(1, 1, positionExplose, true);
-        createExploseLine(-1, 1, positionExplose, true);
-        createExploseLine(-1, -1, positionExplose, true);
-        createExploseLine(1, -1, positionExplose, true);
+        createExplose(positionExplose, prefabs);
+        createExploseLine(1, 1, positionExplose, true, prefabs);
+        createExploseLine(-1, 1, positionExplose, true, prefabs);
+        createExploseLine(-1, -1, positionExplose, true, prefabs);
+        createExploseLine(1, -1, positionExplose, true, prefabs);
     }
 
 
@@ -119,7 +121,7 @@ public class PlaceBomb : MonoBehaviour
 
     // typeX va typeY chi co -1, 0, 1
 
-    public void createExploseLine(int typeX, int typeY, Vector2 position, bool breakWall)
+    public void createExploseLine(int typeX, int typeY, Vector2 position, bool breakWall, GameObject prefabs)
     {
         for (int tmp = 1; tmp <= explosionRadius; tmp++)
         {
@@ -130,13 +132,13 @@ public class PlaceBomb : MonoBehaviour
                 createWallBreak(position);
                 break;
             }
-            createExplose(position);
+            createExplose(position, prefabs);
         }
     }
 
-    public void createExplose(Vector2 positionExplose) 
+    public void createExplose(Vector2 positionExplose, GameObject prefabs) 
     {
-        GameObject explosionClone = Instantiate(explosionPrefabs, positionExplose, Quaternion.identity);
+        GameObject explosionClone = Instantiate(prefabs, positionExplose, Quaternion.identity);
         AnimationScript animationExplosion = explosionClone.GetComponent<AnimationScript>();
         animationExplosion.animationTime = explosionDuration / animationExplosion.animationSprites.Length;
         animationExplosion.idle = false;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7789907086405981873}
   - component: {fileID: 5337381218586967555}
   - component: {fileID: -1892042586575532050}
+  - component: {fileID: 6026244300437173208}
   m_Layer: 0
   m_Name: StunArea
   m_TagString: DamageAll
@@ -30,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.86, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,6 +47,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -74,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 883df0675e8b5e64e9375450987dc8d1, type: 3}
   m_Color: {r: 1, g: 0, b: 0.9614239, a: 0.46666667}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,3 +147,26 @@ MonoBehaviour:
   timeTakeDamage: 0
   stun: 1
   timeStun: 2
+--- !u!114 &6026244300437173208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337381218586967552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4fe101bdbd2f0419367f21765e917a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.5
+  idleSprite: {fileID: 21300000, guid: 883df0675e8b5e64e9375450987dc8d1, type: 3}
+  animationSprites:
+  - {fileID: 21300000, guid: 883df0675e8b5e64e9375450987dc8d1, type: 3}
+  - {fileID: 21300000, guid: f4d67e4a815030b45b48baeb99c60041, type: 3}
+  - {fileID: 21300000, guid: d3589aa41362b684ab18ef5afa334ac9, type: 3}
+  - {fileID: 21300000, guid: 8919cb7b47b9cf347b4cd4f79c4bbcbf, type: 3}
+  - {fileID: 21300000, guid: ebd2e7f193fdacc42806e9cd8430367c, type: 3}
+  - {fileID: 21300000, guid: 495276c7fa0599a4197e97bf0a057fc6, type: 3}
+  loop: 1
+  idle: 1

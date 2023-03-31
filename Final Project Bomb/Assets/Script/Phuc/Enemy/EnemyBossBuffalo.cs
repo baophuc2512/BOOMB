@@ -16,6 +16,9 @@ public class EnemyBossBuffalo : MonoBehaviour
     public float detectRange;
     public GameObject spawnStonePrefab;
 
+    public Sprite spriteIdle;
+    public Sprite spriteCharge;
+
     private void Awake()
     {
         health = GetComponent<Health>();
@@ -34,6 +37,7 @@ public class EnemyBossBuffalo : MonoBehaviour
         if (col.gameObject.tag == "Wall")
         {
             rb.velocity = new Vector2(0f, 0f);
+            GetComponent<SpriteRenderer>().sprite = spriteIdle;
             StartCoroutine(takeStunTime());
             enemySkill.buffaloHitWall(transform.position, 2f);
 
@@ -68,8 +72,11 @@ public class EnemyBossBuffalo : MonoBehaviour
             if (attackTarget != null)
             {
                 attackState = true;
+                GetComponent<SpriteRenderer>().sprite = spriteCharge;
                 Vector2 moveDirection = (attackTarget.position - transform.position).normalized * health.currentSpeed;
                 rb.velocity = new Vector2 (moveDirection.x, moveDirection.y);
+                if (rb.velocity.x > 0) GetComponent<SpriteRenderer>().flipX = true;
+                else GetComponent<SpriteRenderer>().flipX = false;
             }
             yield return new WaitForSeconds(2f);
             while (attackState == true)
@@ -86,8 +93,11 @@ public class EnemyBossBuffalo : MonoBehaviour
                 if (attackTarget != null)
                 {
                     attackState = true;
+                    GetComponent<SpriteRenderer>().sprite = spriteCharge;
                     Vector2 moveDirection = (attackTarget.position - transform.position).normalized * health.currentSpeed;
                     rb.velocity = new Vector2 (moveDirection.x, moveDirection.y);
+                    if (rb.velocity.x > 0) GetComponent<SpriteRenderer>().flipX = true;
+                    else GetComponent<SpriteRenderer>().flipX = false;
                 }
                 yield return new WaitForSeconds(2f);
             } else {

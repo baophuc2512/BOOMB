@@ -19,7 +19,7 @@ public class PlayerInteract : MonoBehaviour
     public InterfaceInteract GetInteractableObject()
     {
         List<InterfaceInteract> interactableList = new List<InterfaceInteract>();
-        float interactRange = 1f;
+        float interactRange = 1.5f;
         Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, interactRange);
         // Bo vao List de quet
         foreach (Collider2D collider in colliderArray)

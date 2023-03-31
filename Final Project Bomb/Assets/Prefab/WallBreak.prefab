@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3932685120675082523}
   - component: {fileID: 2120753388377365152}
   - component: {fileID: 5409591525579092163}
-  - component: {fileID: -264749664124665557}
   m_Layer: 6
   m_Name: WallBreak
   m_TagString: Untagged
@@ -30,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.97, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,6 +45,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -132,19 +133,3 @@ MonoBehaviour:
   - {fileID: 8946755604140867079, guid: 2590fd1dd1872cc4a9cc3ebbc75c4942, type: 3}
   loop: 0
   idle: 1
---- !u!114 &-264749664124665557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3723379690726331466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6b32fb47dbdc244ca26bfc3ec26b4f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefabs:
-  - {fileID: 3017812053524760547, guid: 986808168450a5f46a689554ef84fa29, type: 3}
-  - {fileID: 3675307638618780807, guid: 24117fe0695eea04d9352e7f8decd671, type: 3}
-  - {fileID: 2175713969743475494, guid: a4fdea799d2c8d941ba3d248edd6adb5, type: 3}

@@ -33,7 +33,7 @@ public class AnimationScript : MonoBehaviour
     {
         InvokeRepeating("TakeFrame", animationTime, animationTime);
     }
-
+    
     private void TakeFrame()
     {
         countFrame += 1;
