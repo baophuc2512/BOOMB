@@ -48,5 +48,5 @@ MonoBehaviour:
     typeBomb: 3
     numberBomb: 112
   amountBombCanPlace: 2
-  levelMap: 10
+  levelMap: -1
   enemys: []

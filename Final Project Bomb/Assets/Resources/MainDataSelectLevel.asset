@@ -36,5 +36,5 @@ MonoBehaviour:
     typeBomb: 0
     numberBomb: 0
   amountBombCanPlace: 2
-  levelMap: 4
+  levelMap: -1
   enemys: []
