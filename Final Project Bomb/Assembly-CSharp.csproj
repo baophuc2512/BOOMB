@@ -94,6 +94,7 @@
     <Compile Include="Assets\CurrentHealth2.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemySkill.cs" />
     <Compile Include="Assets\Invenscript.cs" />
+    <Compile Include="Assets\Script\Phuc\AutoDestroy.cs" />
     <Compile Include="Assets\Script\Minh\Load.cs" />
     <Compile Include="Assets\Script\Phuc\SelectItem.cs" />
     <Compile Include="Assets\Script\Phuc\ScriptableMoney.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Assets\Script\Phuc\GenerateEnemy.cs" />
     <Compile Include="Assets\Script\Phuc\EnemyController.cs" />
     <Compile Include="Assets\Script\Minh\RestartFix.cs" />
+    <Compile Include="Assets\Changenumbomb.cs" />
     <Compile Include="Assets\Script\Phuc\Prefab\MovingBullet.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyMiniBoss.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\ShopInteract.cs" />
@@ -126,7 +128,6 @@
     <Compile Include="Assets\Script\Phuc\Interact\PlayerInteractUI.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\Changenumbomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
