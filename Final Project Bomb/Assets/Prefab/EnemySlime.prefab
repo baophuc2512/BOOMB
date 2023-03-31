@@ -743,7 +743,8 @@ MonoBehaviour:
   maxHealth: 200
   enemySpawnPrefab: {fileID: 0}
   numberSpawnEnemy: 0
-  dropMoney: 3
+  dropMoney: 5
+  animationToTurnOff: {fileID: 0}
 --- !u!114 &7122909297652302719
 MonoBehaviour:
   m_ObjectHideFlags: 0

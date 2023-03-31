@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7412508808674287011}
   - component: {fileID: 7412508808674287010}
   - component: {fileID: 7412508808674287009}
+  - component: {fileID: 3992933761726504640}
   m_Layer: 6
   m_Name: StoneBuffalo
   m_TagString: Wall
@@ -112,6 +113,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.25}
   m_EdgeRadius: 0
+--- !u!114 &3992933761726504640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412508808674287008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca7b89bdae76664fb20526476675a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingToDestroy: {fileID: 7412508808674287008}
+  timeToDestroy: 4
 --- !u!1 &7412508809841084014
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +184,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 1, y: 0.78}
   m_EdgeRadius: 0
 --- !u!114 &7412508809841083984
 MonoBehaviour:

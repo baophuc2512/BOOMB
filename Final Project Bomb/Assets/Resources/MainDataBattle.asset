@@ -54,6 +54,6 @@ MonoBehaviour:
     typeBomb: 4
     numberBomb: 10
   amountBombCanPlace: 2
-  levelMap: 14
-  isPvp: 0
+  levelMap: -1
+  isPvp: 1
   enemys: []
