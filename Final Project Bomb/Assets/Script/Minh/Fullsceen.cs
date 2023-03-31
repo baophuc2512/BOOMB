@@ -12,11 +12,13 @@ public class Fullsceen : MonoBehaviour
             if (Screen.fullScreen == true)
             {
                 Screen.fullScreen = false;
+               
             }
 
             else
             {
                 Screen.fullScreen = true;
+                
             }
         }
     }

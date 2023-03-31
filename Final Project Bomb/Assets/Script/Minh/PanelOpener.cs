@@ -25,9 +25,19 @@ public class PanelOpener : MonoBehaviour
     }
     public void ClosePanel()
     {
-        
-            Panel.transform.gameObject.SetActive(false);
+       
+        Panel.transform.gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
         opened = false;
+    }
+    private void Update()
+    {
+         if (Input.GetKey(KeyCode.Escape))
+        {
+            Panel.transform.gameObject.SetActive(false);
+            opened = false;
+            Time.timeScale = 1.0f;
+        }
     }
     public void JustopenPanel()
     {

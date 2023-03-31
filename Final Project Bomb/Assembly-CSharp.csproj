@@ -77,6 +77,7 @@
     <Compile Include="Assets\Script\Phuc\PickUpCoin.cs" />
     <Compile Include="Assets\Pickmap.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBombMovement.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\FarmInteract.cs" />
     <Compile Include="Assets\Script\Minh\ResolutionManager.cs" />
     <Compile Include="Assets\Currenthealthchange.cs" />
     <Compile Include="Assets\Script\Phuc\PlaceBomb.cs" />
@@ -115,12 +116,14 @@
     <Compile Include="Assets\Script\Minh\RestartFix.cs" />
     <Compile Include="Assets\Script\Phuc\Prefab\MovingBullet.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyMiniBoss.cs" />
+    <Compile Include="Assets\Script\Phuc\Interact\ShopInteract.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBossBuffalo.cs" />
     <Compile Include="Assets\Script\Phuc\ApplyData.cs" />
     <Compile Include="Assets\Inventory2Item.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\PlayerInteractUI.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
+    <Compile Include="Assets\Havep2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -137,6 +140,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Animation\tile sprites\fantasy_ [version 2.0]\readMe_.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

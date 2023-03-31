@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_BeforeBattle.unity
     guid: 95a0990a322321b4daf90db5369a36c7
+  - enabled: 1
+    path: Assets/Scenes/SelectLevelScene.unity
+    guid: 9e75b6aa48d5c6e43823f465d399db85
   m_configObjects: {}
