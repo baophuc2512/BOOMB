@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Phuc\MovePlayer.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemySlime.cs" />
     <Compile Include="Assets\Script\Phuc\Prefab\AreaScript.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBossSlime.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Script\Phuc\PickUpCoin.cs" />
     <Compile Include="Assets\Pickmap.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBombMovement.cs" />
+    <Compile Include="Assets\Script\Phuc\SetPvpMode.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\FarmInteract.cs" />
     <Compile Include="Assets\Script\Minh\ResolutionManager.cs" />
     <Compile Include="Assets\Currenthealthchange.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\Script\Phuc\CameraFollow.cs" />
     <Compile Include="Assets\Script\Minh\ExitGame.cs" />
     <Compile Include="Assets\Script\Minh\LoadingScene.cs" />
+    <Compile Include="Assets\Havep2.cs" />
     <Compile Include="Assets\ButtonBuy.cs" />
     <Compile Include="Assets\Script\Phuc\Interact\LevelInteract.cs" />
     <Compile Include="Assets\CurrentHealth2.cs" />
@@ -123,7 +126,7 @@
     <Compile Include="Assets\Script\Phuc\Interact\PlayerInteractUI.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\Havep2.cs" />
+    <Compile Include="Assets\Changenumbomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

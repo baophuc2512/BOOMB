@@ -13,6 +13,7 @@ public class CurrentHealth2 : MonoBehaviour
     private void Start()
     {
         Datadata.maxHealthTwo = 100;
+        thisinput1.text = Datadata.maxHealthTwo + "";
         thistext1.text = Datadata.maxHealthTwo + "";
     }
 

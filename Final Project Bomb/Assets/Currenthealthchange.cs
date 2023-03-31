@@ -14,6 +14,7 @@ public class Currenthealthchange : MonoBehaviour
     private void Start()
     {
         Datadata.maxHealth = 100;
+        thisinput.text = Datadata.maxHealth + "";
         thistext.text = Datadata.maxHealth + "";
     }
     

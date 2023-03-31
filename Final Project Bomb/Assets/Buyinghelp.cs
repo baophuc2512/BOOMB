@@ -37,5 +37,6 @@ public class Buyinghelp : MonoBehaviour
             TextBombs2[i].text = BombData.inventoryPlayerTwo[i].numberBomb.ToString();
 
         }
+
     }
 }
