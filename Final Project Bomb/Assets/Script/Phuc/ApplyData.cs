@@ -24,7 +24,7 @@ public class ApplyData : MonoBehaviour
     [Header("Character Player 2")]
     [SerializeField] private bool havePlayerTwo;
     [SerializeField] private float moveSpeedTwo;
-    [SerializeField] private int maxHealthTwo;
+    [SerializeField] private float maxHealthTwo;
     [SerializeField] private KeyCode inputMoveUpTwo;
     [SerializeField] private KeyCode inputMoveDownTwo;
     [SerializeField] private KeyCode inputMoveLeftTwo;
@@ -34,6 +34,8 @@ public class ApplyData : MonoBehaviour
 
     [Header("In Game Setting")]
     public int amountBombCanPlace;
+    public int levelMap;
+    public bool isPvp;
 
     [Header("Money")]
     [SerializeField] private int currentMoney;
@@ -85,6 +87,9 @@ public class ApplyData : MonoBehaviour
             dataToLoad.inventoryPlayerTwo = inventoryPlayerTwo;
         }
         moneyToLoad.currentMoney = currentMoney;
+        /// Ingame Setting
+        dataToLoad.levelMap = levelMap;
+        dataToLoad.isPvp = isPvp;
     }
 
     public void saveData()
@@ -112,5 +117,8 @@ public class ApplyData : MonoBehaviour
         amountBombCanPlace = dataToLoad.amountBombCanPlace;
         inventoryPlayerTwo = dataToLoad.inventoryPlayerTwo;
         currentMoney = moneyToLoad.currentMoney;
+        /// Ingame Setting
+        levelMap = dataToLoad.levelMap;
+        isPvp = dataToLoad.isPvp;
     }
 }

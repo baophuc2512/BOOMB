@@ -14,10 +14,6 @@ public class GetDataFromSO : MonoBehaviour
         playerOne = GameObject.Find("PlayerOne");
         playerTwo = GameObject.Find("PlayerTwo");
         healthBarPlayerTwo = GameObject.Find("HealthBarTwoPlayer");
-    }
-
-    void Start()
-    {
         GameObject.Find("SaveDataBetweenScene").GetComponent<ApplyData>().loadData();
         if (playerOne != null)
         {

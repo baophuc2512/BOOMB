@@ -1,5 +1,3 @@
-
-
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +11,7 @@ public class TilemapManager : MonoBehaviour
     [SerializeField] private int levelIndex;
     [SerializeField] private ScriptableData dataLoad;
 
-    private void Start()
+    private void Awake()
     {
         levelIndex = dataLoad.levelMap;
         if (levelIndex > 0)
@@ -29,9 +27,9 @@ public class TilemapManager : MonoBehaviour
         newLevel.LevelIndex = levelIndex;
         newLevel.name = $"Level {levelIndex}";
 
-        newLevel.groundTiles = GetTilesFromMap(groundMap).ToList();
-        newLevel.destructableTiles = GetTilesFromMap(destructableMap).ToList();
-        newLevel.indestructableTiles = GetTilesFromMap(indestructableMap).ToList();
+        //newLevel.groundTiles = GetTilesFromMap(groundMap).ToList();
+        //newLevel.destructableTiles = GetTilesFromMap(destructableMap).ToList();
+        //newLevel.indestructableTiles = GetTilesFromMap(indestructableMap).ToList();
         newLevel.enemySpawnTiles = GetTilesFromMap(enemySpawnMap).ToList();
 
         ScriptableObjectUtility.SaveLevelFile(newLevel);
@@ -57,12 +55,8 @@ public class TilemapManager : MonoBehaviour
 
     public void clearMap()
     {
-        var maps = FindObjectsOfType<Tilemap>();
-
-        foreach (var tilemap in maps)
-        {
-            tilemap.ClearAllTiles();
-        }
+        var map = GameObject.Find("SpawnEnemyTile").GetComponent<Tilemap>();
+        map.ClearAllTiles();
     }
 
     public void loadMap()
@@ -75,7 +69,7 @@ public class TilemapManager : MonoBehaviour
         }
 
         clearMap();
-
+        /*
         foreach (var savedTile in level.groundTiles)
         {
             if (savedTile.tile.Type == TileType.grass)
@@ -91,10 +85,14 @@ public class TilemapManager : MonoBehaviour
             if (savedTile.tile.Type == TileType.wallUnbreakable)
                 indestructableMap.SetTile(savedTile.position, savedTile.tile);
         }
+        */
         foreach (var savedTile in level.enemySpawnTiles)
         {
             if (savedTile.tile.Type == TileType.enemyCarrot
-            || savedTile.tile.Type == TileType.enemyOnion)
+            || savedTile.tile.Type == TileType.enemyOnion
+            || savedTile.tile.Type == TileType.enemySmallSlime
+            || savedTile.tile.Type == TileType.enemyBossBuffalo
+            || savedTile.tile.Type == TileType.enemyBossSlime)
                 enemySpawnMap.SetTile(savedTile.position, savedTile.tile);
         }
     }

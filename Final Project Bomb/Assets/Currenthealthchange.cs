@@ -11,13 +11,16 @@ public class Currenthealthchange : MonoBehaviour
     public InputField thisinput;
     float somau;
     KeyCode vkey;
-    private void Awake()
+    private void Start()
     {
-        thistext.text = thistext.text + Datadata.maxHealth;
+        Datadata.maxHealth = 100;
+        thistext.text = Datadata.maxHealth + "";
     }
-    public void Changmau()
+    
+    private void Update()
     {
         float result;
+        thistext.text = Datadata.maxHealth + "";
         float.TryParse(thisinput.text, out result);
         Datadata.maxHealth = result;
     }

@@ -8,6 +8,9 @@ public class GenerateEnemy : MonoBehaviour
     [SerializeField] private Tilemap enemySpawnMap;
     [SerializeField] private GameObject enemyCarrotPrefab;
     [SerializeField] private GameObject enemyOnionPrefab;
+    [SerializeField] private GameObject enemySmallSlimePrefab;
+    [SerializeField] private GameObject enemyBossSlimePrefab;
+    [SerializeField] private GameObject enemyBossBuffaloPrefab;
 
     private void SpawnEnemyFromMap(Tilemap map)
     {
@@ -23,6 +26,18 @@ public class GenerateEnemy : MonoBehaviour
                 if (levelTile.Type == TileType.enemyOnion)
                 {
                     Instantiate(enemyOnionPrefab, pos, Quaternion.identity);
+                }
+                if (levelTile.Type == TileType.enemySmallSlime)
+                {
+                    Instantiate(enemySmallSlimePrefab, pos, Quaternion.identity);
+                }
+                if (levelTile.Type == TileType.enemyBossBuffalo)
+                {
+                    Instantiate(enemyBossBuffaloPrefab, pos, Quaternion.identity);
+                }
+                if (levelTile.Type == TileType.enemyBossSlime)
+                {
+                    Instantiate(enemyBossSlimePrefab, pos, Quaternion.identity);
                 }
             }
         }

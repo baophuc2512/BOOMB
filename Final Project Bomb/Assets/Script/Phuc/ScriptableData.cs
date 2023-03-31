@@ -20,7 +20,7 @@ public class ScriptableData : ScriptableObject
     [Header("Character Player 2")]
     public bool havePlayerTwo;
     public float moveSpeedTwo;
-    public int maxHealthTwo;
+    public float maxHealthTwo;
     public KeyCode inputMoveUpTwo;
     public KeyCode inputMoveDownTwo;
     public KeyCode inputMoveLeftTwo;
@@ -31,8 +31,7 @@ public class ScriptableData : ScriptableObject
     [Header("In Game Setting")]
     public int amountBombCanPlace; 
     public int levelMap;
-    
-    
+    public bool isPvp;
 
     [Header("Generate Enemy")]
     public List<EnemyType> enemys;

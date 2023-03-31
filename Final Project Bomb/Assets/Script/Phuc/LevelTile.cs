@@ -22,4 +22,8 @@ public enum TileType
     // Spawn Enemy
     enemyCarrot = 300,
     enemyOnion = 301,
+    enemySmallSlime = 302,
+    // Spawn Boss
+    enemyBossSlime = 401,
+    enemyBossBuffalo = 402,
 }

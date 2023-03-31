@@ -12,7 +12,7 @@ public class DeathTriggeredPanel : MonoBehaviour
     [SerializeField] PanelOpener PanelOpener;
     GameObject[] playerArrays;
     GameObject[] enemyArrays;
-    bool pvp = false;
+    [SerializeField] private ScriptableData mainData;
     public Text Txt;
     public GameObject panel;
     public Button button;
@@ -20,7 +20,7 @@ public class DeathTriggeredPanel : MonoBehaviour
     {
         playerArrays = GameObject.FindGameObjectsWithTag("Player");
         enemyArrays = GameObject.FindGameObjectsWithTag("Enemy");
-        if (pvp==true)
+        if (mainData.isPvp == true)
         {
             
             if (playerArrays.Length ==   1)
@@ -36,7 +36,7 @@ public class DeathTriggeredPanel : MonoBehaviour
                 Txt.text = "DRAW!!";
             }
         }
-        else if (pvp==false)
+        else if (mainData.isPvp == false)
         {
             if (playerArrays.Length == 0)
             {
@@ -57,11 +57,5 @@ public class DeathTriggeredPanel : MonoBehaviour
     private void Awake()
     {
         enemyArrays = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemyArrays.Length > 0)
-        {
-            pvp = false;
-        }
-        else pvp = true;
     }
-
 }
