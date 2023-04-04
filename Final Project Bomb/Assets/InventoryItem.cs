@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour
 {
+    public GameObject panel;
+    public GameObject mau;
     public void Awake()
     {
         Time.timeScale = 1;
@@ -20,6 +22,16 @@ public class InventoryItem : MonoBehaviour
     private void Start()
     {
         selectItem = player.GetComponent<SelectItem>();
+        if (InvData.havePlayerTwo == true)
+        {
+            panel.SetActive(true);
+            mau.SetActive(true);
+        }
+        else
+        {
+            panel.SetActive(false);
+            mau.SetActive(false);
+        }    
     }
     void Update()
     {
