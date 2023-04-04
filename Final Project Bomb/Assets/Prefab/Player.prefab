@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4249063287467287474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: 0.03, y: -1.69, z: 0}
+  m_LocalScale: {x: 4, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4249063288900883953}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8550689096074359821, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
+  m_Sprite: {fileID: 1021128523, guid: 26d1b3e7227461745a20054b6bb83718, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,14 +98,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationTime: 0.5
-  idleSprite: {fileID: 8550689096074359821, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
+  idleSprite: {fileID: 1021128523, guid: 26d1b3e7227461745a20054b6bb83718, type: 3}
   animationSprites:
-  - {fileID: 8550689096074359821, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
-  - {fileID: 7372897610936918653, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
-  - {fileID: 8435147412315929802, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
-  - {fileID: -5664407706821350008, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
-  - {fileID: 7396963916335149381, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
-  - {fileID: -5609107336785448908, guid: b8e391f315745034eb3b86eb1b93917f, type: 3}
+  - {fileID: 1021128523, guid: 26d1b3e7227461745a20054b6bb83718, type: 3}
+  - {fileID: -208363282, guid: 26d1b3e7227461745a20054b6bb83718, type: 3}
+  - {fileID: 1432079100, guid: 26d1b3e7227461745a20054b6bb83718, type: 3}
+  - {fileID: -1407761364, guid: 26d1b3e7227461745a20054b6bb83718, type: 3}
+  - {fileID: 867925886, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: -1383609597, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: -1588278192, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: 1159941295, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: -748710416, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: 22411880, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: -862164165, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
+  - {fileID: -1752493964, guid: 82878ae7849a3ba489521147edb82f32, type: 3}
   loop: 0
   idle: 1
 --- !u!1 &4249063288900883955
@@ -276,6 +282,9 @@ MonoBehaviour:
   amountBomb: 2
   timeExplose: 2
   explosionPrefabs: {fileID: 2430569008698938120, guid: 251e84824d67e0f45a7c46d80621c098, type: 3}
+  explosionPrefabsStun: {fileID: 0}
+  explosionPrefabsSlow: {fileID: 0}
+  explosionPrefabsPoison: {fileID: 0}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -328,13 +337,14 @@ MonoBehaviour:
   deadAnimation: {fileID: 4249063287467287474}
   moveLeft: {fileID: 0}
   moveRight: {fileID: 0}
-  deadDuration: 1
+  deadDuration: 2
   currentHealth: 100
   currentSpeed: 5
   maxHealth: 100
   enemySpawnPrefab: {fileID: 0}
   numberSpawnEnemy: 0
   dropMoney: 0
+  animationToTurnOff: {fileID: 0}
 --- !u!1 &4334125596737491331
 GameObject:
   m_ObjectHideFlags: 0

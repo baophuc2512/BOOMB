@@ -9,13 +9,13 @@ public class FarmInteract : MonoBehaviour, InterfaceInteract
     [SerializeField] private Sprite noCropSprite;
     [SerializeField] private List<Sprite> kindOfVegetable;
     [SerializeField] private List<int> amountMoneyOfVegetable;
-    private Sprite currentSprite;
+    private SpriteRenderer currentSprite;
     private int amountMoney;
     private bool readyToHarvest;
 
     private void Start()
     {
-        currentSprite = GetComponent<SpriteRenderer>().sprite;
+        currentSprite = GetComponent<SpriteRenderer>();
         StartCoroutine(restock());
     }
 
@@ -30,14 +30,13 @@ public class FarmInteract : MonoBehaviour, InterfaceInteract
 
     public IEnumerator restock()
     {
-        currentSprite = noCropSprite;
+        currentSprite.sprite = noCropSprite;
         readyToHarvest = false;
         yield return new WaitForSeconds(3f);
         int random = Random.Range(0, kindOfVegetable.Count);
-        currentSprite = kindOfVegetable[random];
+        currentSprite.sprite = kindOfVegetable[random];
         amountMoney = amountMoneyOfVegetable[random];
         readyToHarvest = true;
-        Debug.Log(random);
     }
 
     public string GetInteractText()
