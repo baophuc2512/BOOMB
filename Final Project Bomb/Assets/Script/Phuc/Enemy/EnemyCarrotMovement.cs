@@ -10,6 +10,9 @@ public class EnemyCarrotMovement : MonoBehaviour
     public LayerMask wallLayer;
     public LayerMask groundLayer;
     public Transform movePoint;
+    [SerializeField] private GameObject attackAnimation;
+    [SerializeField] private GameObject idleAnimation;
+    [SerializeField] private GameObject appearAnimation;
 
     private void Awake() 
     {
@@ -36,12 +39,30 @@ public class EnemyCarrotMovement : MonoBehaviour
             }
 
             transform.position = movePoint.position;
+
+            yield return new WaitForSeconds(1f);
+
+            idleAnimation.GetComponent<AnimationScript>().enabled = false;
+            attackAnimation.GetComponent<AnimationScript>().enabled = true;
+            appearAnimation.GetComponent<AnimationScript>().enabled = false;
             
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             enemySkill.playSkill(1, transform.position);
 
+            yield return new WaitForSeconds(1f);
+
+            idleAnimation.GetComponent<AnimationScript>().enabled = true;
+            attackAnimation.GetComponent<AnimationScript>().enabled = false;
+            appearAnimation.GetComponent<AnimationScript>().enabled = false;
+
             yield return new WaitForSeconds(2f);
+
+            idleAnimation.GetComponent<AnimationScript>().enabled = false;
+            attackAnimation.GetComponent<AnimationScript>().enabled = false;
+            appearAnimation.GetComponent<AnimationScript>().enabled = true;
+
+            yield return new WaitForSeconds(1f);
         }
         
     }

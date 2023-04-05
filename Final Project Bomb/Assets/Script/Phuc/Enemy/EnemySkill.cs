@@ -50,6 +50,7 @@ public class EnemySkill : MonoBehaviour
         {
             movingBullet.directionX = 1;
             movingBullet.directionY = 0;
+            movingBullet.transform.rotation = Quaternion.Euler(0, 0, -180);
         }
         if (dir == 2)
         {
@@ -60,13 +61,13 @@ public class EnemySkill : MonoBehaviour
         {
             movingBullet.directionX = 0;
             movingBullet.directionY = 1;
-            movingBullet.transform.rotation = Quaternion.Euler(0, 0, 90);
+            movingBullet.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
         if (dir == 4)
         {
             movingBullet.directionX = 0;
             movingBullet.directionY = -1;
-            movingBullet.transform.rotation = Quaternion.Euler(0, 0, -90);
+            movingBullet.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
     }
 

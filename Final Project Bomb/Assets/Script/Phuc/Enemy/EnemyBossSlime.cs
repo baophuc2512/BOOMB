@@ -70,20 +70,18 @@ public class EnemyBossSlime : MonoBehaviour
         {
             float scaleX = transform.localScale.x;
             float scaleY = transform.localScale.y;
-            for (int tmp = 1; tmp <= 100; tmp++)
+            for (int tmp = 1; tmp <= 70; tmp++)
             {
                 transform.localScale -= new Vector3 (scaleX / 100f, scaleY / 100f, 0f);
                 yield return new WaitForSeconds(0.02f);
             }
-            Transform target = findNearestPlayer();
             yield return new WaitForSeconds(1f);
-            if (target != null) transform.position = target.position + new Vector3(0.5f, 0.5f, 0);
 
             Vector2 force = new Vector2(1000 * Time.fixedDeltaTime * health.currentSpeed, 1000 * Time.fixedDeltaTime * health.currentSpeed);
             Vector2 rotatedForce = Quaternion.AngleAxis(Random.Range(-360, 360), Vector3.forward) * force;
             rb.AddForce(rotatedForce);
 
-            for (int tmp = 1; tmp <= 100; tmp++)
+            for (int tmp = 1; tmp <= 70; tmp++)
             {
                 transform.localScale += new Vector3 (scaleX / 100f, scaleY / 100f, 0f);
                 yield return new WaitForSeconds(0.02f);
@@ -95,21 +93,19 @@ public class EnemyBossSlime : MonoBehaviour
         {
             float scaleX = transform.localScale.x;
             float scaleY = transform.localScale.y;
-            for (int tmp = 1; tmp <= 100; tmp++)
+            for (int tmp = 1; tmp <= 70; tmp++)
             {
                 transform.localScale -= new Vector3 (scaleX / 100f, scaleY / 100f, 0f);
                 yield return new WaitForSeconds(0.02f);
             }
-            Transform target = findNearestPlayer();
             yield return new WaitForSeconds(1f);
-            if (target != null) transform.position = target.position + new Vector3(0.5f, 0.5f, 0);
             enemySkill.playSkill(1, transform.position);
 
             Vector2 force = new Vector2(1000 * Time.fixedDeltaTime * health.currentSpeed, 1000 * Time.fixedDeltaTime * health.currentSpeed);
             Vector2 rotatedForce = Quaternion.AngleAxis(Random.Range(-360, 360), Vector3.forward) * force;
             rb.AddForce(rotatedForce);
 
-            for (int tmp = 1; tmp <= 100; tmp++)
+            for (int tmp = 1; tmp <= 70; tmp++)
             {
                 transform.localScale += new Vector3 (scaleX / 100f, scaleY / 100f, 0f);
                 yield return new WaitForSeconds(0.02f);
