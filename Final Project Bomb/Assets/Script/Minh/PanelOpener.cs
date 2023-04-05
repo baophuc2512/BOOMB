@@ -31,15 +31,6 @@ public class PanelOpener : MonoBehaviour
         Time.timeScale = 1.0f;
         opened = false;
     }
-    private void Update()
-    {
-         if (Input.GetKey(KeyCode.Escape))
-        {
-            Panel.transform.gameObject.SetActive(false);
-            opened = false;
-            Time.timeScale = 1.0f;
-        }
-    }
     public void JustopenPanel()
     {
         Panel.transform.gameObject.SetActive(true);

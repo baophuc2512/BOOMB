@@ -1152,14 +1152,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1044956890}
-          m_TargetAssemblyTypeName: Buttonenlargescript, Assembly-CSharp
+        - m_Target: {fileID: 1044956894}
+          m_TargetAssemblyTypeName: Btnenlargeadvance, Assembly-CSharp
           m_MethodName: Enlarge
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1168,14 +1168,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1044956890}
-          m_TargetAssemblyTypeName: Buttonenlargescript, Assembly-CSharp
+        - m_Target: {fileID: 1044956894}
+          m_TargetAssemblyTypeName: Btnenlargeadvance, Assembly-CSharp
           m_MethodName: Mini
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1780,14 +1780,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
+  - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1044956888}
-          m_TargetAssemblyTypeName: Buttonenlargescript, Assembly-CSharp
-          m_MethodName: Enlarge
-          m_Mode: 1
+        - m_Target: {fileID: 1044956894}
+          m_TargetAssemblyTypeName: Btnenlargeadvance, Assembly-CSharp
+          m_MethodName: Mini
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1796,14 +1796,14 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 1
+  - eventID: 0
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1044956888}
-          m_TargetAssemblyTypeName: Buttonenlargescript, Assembly-CSharp
-          m_MethodName: Mini
-          m_Mode: 1
+        - m_Target: {fileID: 1044956894}
+          m_TargetAssemblyTypeName: Btnenlargeadvance, Assembly-CSharp
+          m_MethodName: Enlarge
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1983,10 +1983,9 @@ GameObject:
   - component: {fileID: 1044956887}
   - component: {fileID: 1044956888}
   - component: {fileID: 1044956889}
-  - component: {fileID: 1044956891}
-  - component: {fileID: 1044956890}
   - component: {fileID: 1044956892}
   - component: {fileID: 1044956893}
+  - component: {fileID: 1044956894}
   m_Layer: 0
   m_Name: LoadingScene
   m_TagString: Untagged
@@ -2035,32 +2034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantToSave: 0
---- !u!114 &1044956890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044956885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 752e05a3995f81843b3bc57bdb6607f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons: {fileID: 460358130}
---- !u!114 &1044956891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044956885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 752e05a3995f81843b3bc57bdb6607f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons: {fileID: 2009091140}
 --- !u!114 &1044956892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2086,6 +2059,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd13086442d1f143b515d0aa58e33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1044956894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044956885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 517e8f91431cd084c851f6e4298ddbfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 933458566}
+  - {fileID: 2009091140}
+  - {fileID: 460358130}
+  image:
+  - {fileID: 933458567}
+  - {fileID: 2009091141}
+  - {fileID: 460358131}
+  sprite1:
+  - {fileID: 21300000, guid: 699ae6a645b3d9c44a07e28a08e59161, type: 3}
+  - {fileID: 21300000, guid: 618870894b65e3f4b9ebaa41444f79a2, type: 3}
+  - {fileID: 21300000, guid: 519bb1c16fcbc614896484b6b4ab9b20, type: 3}
+  sprite2:
+  - {fileID: 21300000, guid: f21895b5fdcb2754286a05475a2dca2f, type: 3}
+  - {fileID: 21300000, guid: 272e0e0e625b40e498bc5ad0ec251866, type: 3}
+  - {fileID: 21300000, guid: 94c4acc7435f90f4b802192decc28ddc, type: 3}
+  wid1: 500
+  hig1: 150
+  wid2: 600
+  hig2: 180
 --- !u!1 &1120582751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,14 +4036,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1044956891}
-          m_TargetAssemblyTypeName: Buttonenlargescript, Assembly-CSharp
+        - m_Target: {fileID: 1044956894}
+          m_TargetAssemblyTypeName: Btnenlargeadvance, Assembly-CSharp
           m_MethodName: Enlarge
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -4047,14 +4052,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1044956891}
-          m_TargetAssemblyTypeName: Buttonenlargescript, Assembly-CSharp
+        - m_Target: {fileID: 1044956894}
+          m_TargetAssemblyTypeName: Btnenlargeadvance, Assembly-CSharp
           m_MethodName: Mini
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
