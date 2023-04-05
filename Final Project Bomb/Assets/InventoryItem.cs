@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour
 {
     public GameObject panel;
+    public GameObject panel2;
     public GameObject mau;
     public void Awake()
     {
@@ -25,11 +26,13 @@ public class InventoryItem : MonoBehaviour
         if (InvData.havePlayerTwo == true)
         {
             panel.SetActive(true);
+            panel2.SetActive(true);
             mau.SetActive(true);
         }
         else
         {
             panel.SetActive(false);
+            panel2.SetActive(false);
             mau.SetActive(false);
         }    
     }

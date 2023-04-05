@@ -86,6 +86,7 @@
     <Compile Include="Assets\Script\Phuc\PlaceBomb.cs" />
     <Compile Include="Assets\Script\Phuc\NetworkUI\NetworkManagerUI.cs" />
     <Compile Include="Assets\Buyinghelp.cs" />
+    <Compile Include="Assets\Btnenlargeadvance.cs" />
     <Compile Include="Assets\Script\Phuc\CameraFollow.cs" />
     <Compile Include="Assets\Script\Minh\ExitGame.cs" />
     <Compile Include="Assets\Script\Minh\LoadingScene.cs" />
@@ -131,7 +132,6 @@
     <Compile Include="Assets\EnlargeHomescene.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\Btnenlargeadvance.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
