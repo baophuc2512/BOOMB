@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,8 @@ public class Buyinghelp : MonoBehaviour
 {
     public ScriptableData BombData;
     public ScriptableMoney Moneyyy;
-    public List<Text> TextBombs;
-    public List<Text> TextBombs2;
+    public List<TextMeshProUGUI> TextBombs;
+    public List<TextMeshProUGUI> TextBombs2;
    
     void Start()
     {

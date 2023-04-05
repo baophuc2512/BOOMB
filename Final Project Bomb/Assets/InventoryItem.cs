@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class InventoryItem : MonoBehaviour
         Time.timeScale = 1;
     }
     public List<Image> hightlights;
-    public List<Text> Chu;
+    public List<TextMeshProUGUI> Chu;
     public GameObject player;
     private SelectItem selectItem;
     public ScriptableData InvData;
