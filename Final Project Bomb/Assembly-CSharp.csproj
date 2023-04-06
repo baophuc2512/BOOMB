@@ -59,6 +59,7 @@
     <Compile Include="Assets\Script\Phuc\MovePlayer.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemySlime.cs" />
     <Compile Include="Assets\Script\Phuc\Prefab\AreaScript.cs" />
+    <Compile Include="Assets\invright1.cs" />
     <Compile Include="Assets\turnongameobject.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBossSlime.cs" />
     <Compile Include="Assets\InventoryItem.cs" />

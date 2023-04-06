@@ -9,74 +9,56 @@ using UnityEngine.UI;
 public class KeyBinding : MonoBehaviour
 {
     public ScriptableData dataManager;
-    public TextMeshProUGUI nowtext;
-    public Text currentText;
+    public TextMeshProUGUI text;
     private bool isBinding = false;
-    public int i;
-    KeyCode vkey2;
-    public void Awake()
-    {   
-        if (i==1)
-        {
-            if (currentText.text.Contains("RightInv"))
-            {
-                //nowtext.text = dataManager.inputPlaceBomb.ToString();
-            }
-            else if (currentText.text.Contains("LeftInv"))
-            {
-                //nowtext.text = dataManager.inputPlaceBomb.ToString();
-            }
-            else if (currentText.text.Contains("Attk"))
-            {
-                nowtext.text = dataManager.inputPlaceBomb.ToString();
-            }
-        }
-        
+    public int type;
 
-    }
+    // 1: player 1 key up, 2: player 1 key down, 3: player 1 key attack
+    // 4: player 2 key up, 5: player 2 key down, 6: player 2 key attack
+
     private void Update()
     {
+        if (type == 1) text.text = dataManager.inputChangeInventoryUp.ToString();
+        if (type == 2) text.text = dataManager.inputChangeInventoryDown.ToString();
+        if (type == 3) text.text = dataManager.inputPlaceBomb.ToString();
+        if (type == 4) text.text = dataManager.inputChangeInventoryUpTwo.ToString();
+        if (type == 5) text.text = dataManager.inputChangeInventoryDownTwo.ToString();
+        if (type == 6) text.text = dataManager.inputPlaceBombTwo.ToString();
         if (isBinding == true)
         {
-            if (i == 1)
+            foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
             {
-                foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
+                if (Input.GetKey(vKey))
                 {
-                    if (Input.GetKey(vKey))
+                    // Doi cai current text
+                    if (type == 1)
                     {
-                        // Doi cai current text
-
-                        if (currentText.text.Contains("Rightinv"))
-                        {
-                            //dataManager.input = vKey;
-                            //currentText.text = "KeyDown: " + dataManager.inputMoveDown;
-                        }
-                        else if (currentText.text.Contains("LeftInv"))
-                        {
-                            //dataManager.inputMoveUp = vKey;
-                            //currentText.text = "KeyUp: " + dataManager.inputMoveUp;
-                        }
-                        else if (currentText.text.Contains("Attk1"))
-                        {
-                            dataManager.inputPlaceBomb = vKey;
-                            currentText.text = dataManager.inputPlaceBomb.ToString();
-                        }
-                        isBinding = false;
-                        vkey2 = vKey;
+                        dataManager.inputChangeInventoryUp = vKey;
                     }
+                    if (type == 2)
+                    {
+                        dataManager.inputChangeInventoryDown = vKey;
+                    }
+                    if (type == 3)
+                    {
+                        dataManager.inputPlaceBomb = vKey;
+                    }
+                    if (type == 4)
+                    {
+                        dataManager.inputChangeInventoryUpTwo = vKey;
+                    }
+                    if (type == 5)
+                    {
+                        dataManager.inputChangeInventoryDownTwo = vKey;
+                    }
+                    if (type == 6)
+                    {
+                        dataManager.inputPlaceBombTwo = vKey;
+                    }
+                    isBinding = false;
                 }
-
             }
-            else if (i == 2)
-            {
-
-            }
-            
-              
-            
-            
         }
-    
     }
     public void changeButton()
     {
@@ -89,5 +71,4 @@ public class KeyBinding : MonoBehaviour
         yield return new WaitForSeconds(3f);
         isBinding = false;
     }
-
 }

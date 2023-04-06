@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Reschangev2 : MonoBehaviour
 {
-    public Dropdown resolutionDropdown;
     public Text chu;
     Resolution[] resolutions;
     public List<string> options = new List<string>();
@@ -14,7 +13,6 @@ public class Reschangev2 : MonoBehaviour
     void Start()
     {
         resolutions= Screen.resolutions;
-        resolutionDropdown.ClearOptions();
         
         string current1="";
         for (int i = 0; i < resolutions.Length; i++)
@@ -31,9 +29,6 @@ public class Reschangev2 : MonoBehaviour
             
         }
         chu.text = options[currentResolutionIndex];
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value= currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
     }
      void Update()
     {       
