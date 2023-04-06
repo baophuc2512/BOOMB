@@ -6,6 +6,7 @@ public class PauseGame : MonoBehaviour
 {
     public GameObject panel;
     public GameObject buttons;
+    
     // Update is called once per frame
     IEnumerator Reset()
     {

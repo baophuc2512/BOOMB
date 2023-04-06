@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Transactions;
 using TMPro;
 using UnityEngine;
@@ -16,6 +17,10 @@ public class DeathTriggeredPanel : MonoBehaviour
     public Text Txt;
     public GameObject panel;
     public Button button;
+    public GameObject imagewon;
+    public GameObject imagelose;
+    public GameObject player1won;
+    public GameObject player2won;
     private void Update()
     {
         playerArrays = GameObject.FindGameObjectsWithTag("Player");
@@ -27,7 +32,17 @@ public class DeathTriggeredPanel : MonoBehaviour
             {
                 panel.gameObject.SetActive(true);
                 button.gameObject.SetActive(false);
-                Txt.text = playerArrays[0].name+ " WIN!";               
+                Txt.text = playerArrays[0].name+ " WIN!";   
+                //if (playerArrays[0].name=="PlayerOne")
+                {
+                    player1won.gameObject.SetActive(true);
+                    player2won.gameObject.SetActive(false);
+                }
+                //else
+                //{
+                //    player1won.gameObject.SetActive(false);
+               //     player2won.gameObject.SetActive(true) ;
+               //    }
             }
             else if (playerArrays.Length == 0)
             {
@@ -42,13 +57,16 @@ public class DeathTriggeredPanel : MonoBehaviour
             {
                 panel.gameObject.SetActive(true);
                 button.gameObject.SetActive(false);
-                Txt.text = "GAMEOVER!!";
+                imagelose.gameObject.SetActive(true) ;
+                imagewon.gameObject.SetActive(false) ;
             }
             else if (enemyArrays.Length==0)
             {
                 panel.gameObject.SetActive(true);
                 button.gameObject.SetActive(false);
                 Txt.text = "YOU WIN!";
+                imagelose.gameObject.SetActive(false);
+                imagewon.gameObject.SetActive(true);
             }
         }
         

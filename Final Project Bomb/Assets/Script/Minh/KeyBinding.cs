@@ -2,66 +2,43 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class KeyBinding : MonoBehaviour
 {
     public ScriptableData dataManager;
+    public TextMeshProUGUI nowtext;
     public Text currentText;
     private bool isBinding = false;
-    public Text Playertext;
+    public int i;
     KeyCode vkey2;
     public void Awake()
     {   
-        if (Playertext.text =="Player1")
+        if (i==1)
         {
-             if (currentText.text.Contains("Down"))
-        {
-            currentText.text = "KeyDown: " + dataManager.inputMoveDown;
-        }
-        else if (currentText.text.Contains("Up"))
-        {
-            currentText.text = "KeyUp: " + dataManager.inputMoveUp;
-        }
-
-        else if (currentText.text.Contains("Left"))
-        {
-            currentText.text = "KeyLeft: " + dataManager.inputMoveLeft;
-        }
-        else if (currentText.text.Contains("Right"))
-        {
-            currentText.text = "KeyRight: " + dataManager.inputMoveRight;
-        }
-        }
-        else if (Playertext.text =="Player2")
-        {
-            if (currentText.text.Contains("Down"))
+            if (currentText.text.Contains("RightInv"))
             {
-                currentText.text = "KeyDown: " + dataManager.inputMoveDownTwo;
+                //nowtext.text = dataManager.inputPlaceBomb.ToString();
             }
-            else if (currentText.text.Contains("Up"))
+            else if (currentText.text.Contains("LeftInv"))
             {
-                currentText.text = "KeyUp: " + dataManager.inputMoveUpTwo;
+                //nowtext.text = dataManager.inputPlaceBomb.ToString();
             }
-
-            else if (currentText.text.Contains("Left"))
+            else if (currentText.text.Contains("Attk"))
             {
-                currentText.text = "KeyLeft: " + dataManager.inputMoveLeftTwo;
-            }
-            else if (currentText.text.Contains("Right"))
-            {
-                currentText.text = "KeyRight: " + dataManager.inputMoveRightTwo;
+                nowtext.text = dataManager.inputPlaceBomb.ToString();
             }
         }
         
+
     }
     private void Update()
     {
         if (isBinding == true)
         {
-            if (Playertext.text =="Player1")
+            if (i == 1)
             {
                 foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
                 {
@@ -69,70 +46,35 @@ public class KeyBinding : MonoBehaviour
                     {
                         // Doi cai current text
 
-                        if (currentText.text.Contains("Down"))
+                        if (currentText.text.Contains("Rightinv"))
                         {
-                            dataManager.inputMoveDown = vKey;
-                            currentText.text = "KeyDown: " + dataManager.inputMoveDown;
+                            //dataManager.input = vKey;
+                            //currentText.text = "KeyDown: " + dataManager.inputMoveDown;
                         }
-                        else if (currentText.text.Contains("Up"))
+                        else if (currentText.text.Contains("LeftInv"))
                         {
-                            dataManager.inputMoveUp = vKey;
-                            currentText.text = "KeyUp: " + dataManager.inputMoveUp;
+                            //dataManager.inputMoveUp = vKey;
+                            //currentText.text = "KeyUp: " + dataManager.inputMoveUp;
                         }
-
-                        else if (currentText.text.Contains("Left"))
+                        else if (currentText.text.Contains("Attk1"))
                         {
-                            dataManager.inputMoveLeft = vKey;
-                            currentText.text = "KeyLeft: " + dataManager.inputMoveLeft;
+                            dataManager.inputPlaceBomb = vKey;
+                            currentText.text = dataManager.inputPlaceBomb.ToString();
                         }
-                        else if (currentText.text.Contains("Right"))
-                        {
-                            dataManager.inputMoveRight = vKey;
-                            currentText.text = "KeyRight: " + dataManager.inputMoveRight;
-                        }
-
                         isBinding = false;
                         vkey2 = vKey;
                     }
                 }
-            
+
             }
-            else if (Playertext.text =="Player2")
+            else if (i == 2)
             {
-                foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
-                {
-                    if (Input.GetKey(vKey))
-                    {
-                        // Doi cai current text
 
-                        if (currentText.text.Contains("Down"))
-                        {
-                            dataManager.inputMoveDown = vKey;
-                            currentText.text = "KeyDown: " + dataManager.inputMoveDownTwo;
-                        }
-                        else if (currentText.text.Contains("Up"))
-                        {
-                            dataManager.inputMoveUp = vKey;
-                            currentText.text = "KeyUp: " + dataManager.inputMoveUpTwo;
-                        }
-
-                        else if (currentText.text.Contains("Left"))
-                        {
-                            dataManager.inputMoveLeft = vKey;
-                            currentText.text = "KeyLeft: " + dataManager.inputMoveLeftTwo;
-                        }
-                        else if (currentText.text.Contains("Right"))
-                        {
-                            dataManager.inputMoveRight = vKey;
-                            currentText.text = "KeyRight: " + dataManager.inputMoveRightTwo;
-                        }
-
-                        isBinding = false;
-                        vkey2 = vKey;
-                    }
-                }
-            
             }
+            
+              
+            
+            
         }
     
     }

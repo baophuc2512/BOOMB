@@ -132,6 +132,8 @@
     <Compile Include="Assets\EnlargeHomescene.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
+    <Compile Include="Assets\Script\Minh\Attk.cs" />
+    <Compile Include="Assets\turnongameobject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
