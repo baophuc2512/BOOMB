@@ -59,6 +59,7 @@
     <Compile Include="Assets\Script\Phuc\MovePlayer.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemySlime.cs" />
     <Compile Include="Assets\Script\Phuc\Prefab\AreaScript.cs" />
+    <Compile Include="Assets\turnongameobject.cs" />
     <Compile Include="Assets\Script\Phuc\Enemy\EnemyBossSlime.cs" />
     <Compile Include="Assets\InventoryItem.cs" />
     <Compile Include="Assets\EscPause.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Script\Phuc\Stats\Health.cs" />
     <Compile Include="Assets\enlargePauseIngame.cs" />
     <Compile Include="Assets\Script\Phuc\CameraFollowMultiplePlayer.cs" />
+    <Compile Include="Assets\Script\Minh\Attk.cs" />
     <Compile Include="Assets\Script\Phuc\ItemPickup.cs" />
     <Compile Include="Assets\Script\Phuc\LevelTile.cs" />
     <Compile Include="Assets\Script\Minh\DeathTriggeredPanel.cs" />
@@ -132,8 +134,6 @@
     <Compile Include="Assets\EnlargeHomescene.cs" />
     <Compile Include="Assets\Script\Minh\PanelOpener.cs" />
     <Compile Include="Assets\Script\Minh\KeyBinding.cs" />
-    <Compile Include="Assets\Script\Minh\Attk.cs" />
-    <Compile Include="Assets\turnongameobject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

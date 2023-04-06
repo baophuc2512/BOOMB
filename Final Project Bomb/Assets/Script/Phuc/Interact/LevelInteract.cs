@@ -11,11 +11,13 @@ public class LevelInteract : MonoBehaviour, InterfaceInteract
     [SerializeField] private GameObject panel;
     private GameObject saveDataBetweenScene;
     private ApplyData applyData;
+    private GameObject player;
 
     private void Awake()
     {
         saveDataBetweenScene = GameObject.Find("SaveDataBetweenScene");
         applyData = saveDataBetweenScene.GetComponent<ApplyData>();
+        player = GameObject.FindWithTag("Player");
     }
 
     public void Interact()
@@ -25,6 +27,22 @@ public class LevelInteract : MonoBehaviour, InterfaceInteract
         mainDataBattle.isPvp = false;
         applyData.saveData();
         panel.SetActive(true);
+        StartCoroutine(checkDistance());
+    }
+
+    public IEnumerator checkDistance()
+    {
+        while (true)
+        {
+            float distance = Vector2.Distance(new Vector2(transform.position.x, transform.position.y), new Vector2(player.transform.position.x, player.transform.position.y));
+            if (distance >= 3f)
+            {
+                panel.SetActive(false);
+                break;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+
     }
 
     public string GetInteractText()
