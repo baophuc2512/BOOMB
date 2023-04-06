@@ -15,6 +15,8 @@ public class ScriptableData : ScriptableObject
     public KeyCode inputMoveLeft;
     public KeyCode inputMoveRight;
     public KeyCode inputPlaceBomb;
+    public KeyCode inputChangeInventoryUp;
+    public KeyCode inputChangeInventoryDown;
     public List<Inventory> inventoryPlayerOne;
 
     [Header("Character Player 2")]
@@ -26,6 +28,8 @@ public class ScriptableData : ScriptableObject
     public KeyCode inputMoveLeftTwo;
     public KeyCode inputMoveRightTwo;
     public KeyCode inputPlaceBombTwo;
+    public KeyCode inputChangeInventoryUpTwo;
+    public KeyCode inputChangeInventoryDownTwo;
     public List<Inventory> inventoryPlayerTwo; 
 
     [Header("In Game Setting")]

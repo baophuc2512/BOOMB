@@ -27,6 +27,8 @@ public class GetDataFromSO : MonoBehaviour
             playerOne.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBomb;
             playerOne.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
             playerOne.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerOne;
+            playerOne.GetComponent<SelectItem>().selectDown = dataToLoad.inputChangeInventoryDown;
+            playerOne.GetComponent<SelectItem>().selectUp = dataToLoad.inputChangeInventoryUp;
         }
 
         if (dataToLoad.havePlayerTwo == true && playerTwo != null)
@@ -43,6 +45,8 @@ public class GetDataFromSO : MonoBehaviour
             playerTwo.GetComponent<PlaceBomb>().inputPlaceBomb = dataToLoad.inputPlaceBombTwo;
             playerTwo.GetComponent<PlaceBomb>().amountBomb = dataToLoad.amountBombCanPlace;
             playerTwo.GetComponent<SelectItem>().inventory = dataToLoad.inventoryPlayerTwo;
+            playerTwo.GetComponent<SelectItem>().selectDown = dataToLoad.inputChangeInventoryDownTwo;
+            playerTwo.GetComponent<SelectItem>().selectUp = dataToLoad.inputChangeInventoryUpTwo;
         }
     }
 }

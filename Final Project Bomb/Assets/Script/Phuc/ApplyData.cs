@@ -19,6 +19,8 @@ public class ApplyData : MonoBehaviour
     [SerializeField] private KeyCode inputMoveLeft;
     [SerializeField] private KeyCode inputMoveRight;
     [SerializeField] private KeyCode inputPlaceBomb;
+    [SerializeField] private KeyCode inputChangeInventoryUp;
+    [SerializeField] private KeyCode inputChangeInventoryDown;
     [SerializeField] private List<Inventory> inventoryPlayerOne;
 
     [Header("Character Player 2")]
@@ -30,6 +32,8 @@ public class ApplyData : MonoBehaviour
     [SerializeField] private KeyCode inputMoveLeftTwo;
     [SerializeField] private KeyCode inputMoveRightTwo;
     [SerializeField] private KeyCode inputPlaceBombTwo;
+    [SerializeField] private KeyCode inputChangeInventoryUpTwo;
+    [SerializeField] private KeyCode inputChangeInventoryDownTwo;
     [SerializeField] private List<Inventory> inventoryPlayerTwo;
 
     [Header("In Game Setting")]
@@ -69,6 +73,8 @@ public class ApplyData : MonoBehaviour
             dataToLoad.inputPlaceBomb = inputPlaceBomb;
             dataToLoad.amountBombCanPlace = amountBombCanPlace;
             dataToLoad.inventoryPlayerOne = inventoryPlayerOne;
+            dataToLoad.inputChangeInventoryDown = inputChangeInventoryDown;
+            dataToLoad.inputChangeInventoryUp = inputChangeInventoryUp;
         }
         dataToLoad.havePlayerTwo = havePlayerTwo;
         if (havePlayerTwo == true && playerTwo != null)
@@ -85,6 +91,8 @@ public class ApplyData : MonoBehaviour
             dataToLoad.inputPlaceBombTwo = inputPlaceBombTwo;
             dataToLoad.amountBombCanPlace = amountBombCanPlace;
             dataToLoad.inventoryPlayerTwo = inventoryPlayerTwo;
+            dataToLoad.inputChangeInventoryDownTwo = inputChangeInventoryDownTwo;
+            dataToLoad.inputChangeInventoryUpTwo = inputChangeInventoryUpTwo;
         }
         moneyToLoad.currentMoney = currentMoney;
         /// Ingame Setting
@@ -105,6 +113,9 @@ public class ApplyData : MonoBehaviour
         inputPlaceBomb = dataToLoad.inputPlaceBomb;
         amountBombCanPlace = dataToLoad.amountBombCanPlace;
         inventoryPlayerOne = dataToLoad.inventoryPlayerOne;
+        inputChangeInventoryDown = dataToLoad.inputChangeInventoryDown;
+        inputChangeInventoryUp = dataToLoad.inputChangeInventoryUp;
+        /////-----------
         havePlayerTwo = dataToLoad.havePlayerTwo;
         inputMoveDownTwo = dataToLoad.inputMoveDownTwo;
         inputMoveUpTwo = dataToLoad.inputMoveUpTwo;
@@ -116,6 +127,8 @@ public class ApplyData : MonoBehaviour
         inputPlaceBombTwo = dataToLoad.inputPlaceBombTwo;
         amountBombCanPlace = dataToLoad.amountBombCanPlace;
         inventoryPlayerTwo = dataToLoad.inventoryPlayerTwo;
+        inputChangeInventoryDownTwo = dataToLoad.inputChangeInventoryDownTwo;
+        inputChangeInventoryUpTwo = dataToLoad.inputChangeInventoryUpTwo;
         currentMoney = moneyToLoad.currentMoney;
         /// Ingame Setting
         levelMap = dataToLoad.levelMap;
