@@ -44,7 +44,15 @@ public class Reschangev2 : MonoBehaviour
         }
         else currentResolutionIndex++;
         Resolution resolution = resolutions[currentResolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, false, resolution.refreshRate);
+        if ( resolution.width<1760 && resolution.height<990)
+        {
+            Screen.SetResolution(resolution.width, resolution.height, false, resolution.refreshRate);
+        }
+        else 
+        {
+            Screen.SetResolution(resolution.width, resolution.height, true, resolution.refreshRate);
+        }
+       
     }    
     public void backward()
     {
@@ -54,7 +62,14 @@ public class Reschangev2 : MonoBehaviour
         }
         currentResolutionIndex--;
         Resolution resolution = resolutions[currentResolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, false, resolution.refreshRate);
+        if (resolution.width <1760 && resolution.height < 990)
+        {
+            Screen.SetResolution(resolution.width, resolution.height, false, resolution.refreshRate);
+        }
+        else
+        {
+            Screen.SetResolution(resolution.width, resolution.height, true, resolution.refreshRate);
+        }
     }
    // public void setres(int resolutionIndex)
     //{
