@@ -28,21 +28,22 @@ public class DeathTriggeredPanel : MonoBehaviour
         if (mainData.isPvp == true)
         {
             
-            if (playerArrays.Length ==   1)
+            if (playerArrays.Length ==1)
             {
+                Debug.Log("Co vo");
                 panel.gameObject.SetActive(true);
                 button.gameObject.SetActive(false);
-                Txt.text = playerArrays[0].name+ " WIN!";   
-                //if (playerArrays[0].name=="PlayerOne")
+   
+                if (playerArrays[0].name=="PlayerOne")
                 {
                     player1won.gameObject.SetActive(true);
                     player2won.gameObject.SetActive(false);
                 }
-                //else
-                //{
-                //    player1won.gameObject.SetActive(false);
-               //     player2won.gameObject.SetActive(true) ;
-               //    }
+                else
+               {
+                   player1won.gameObject.SetActive(false);
+                    player2won.gameObject.SetActive(true) ;
+                  }
             }
             else if (playerArrays.Length == 0)
             {

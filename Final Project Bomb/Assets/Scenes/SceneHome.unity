@@ -1981,7 +1981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3713f8039cc41904b8c8701f22f062e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionDropdown: {fileID: 1716906913}
   chu: {fileID: 0}
   options: []
   currentResolutionIndex: 0
@@ -2025,6 +2024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 1976405177}
+  button: {fileID: 0}
 --- !u!114 &1085290819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2038,8 +2038,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 830512493}
-  Playertext: {fileID: 466340502}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,8 +2053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 537049769}
-  Playertext: {fileID: 466340502}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,8 +2068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 1150261480}
-  Playertext: {fileID: 466340502}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,8 +2083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 1077637433}
-  Playertext: {fileID: 466340502}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,8 +2110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 1751165246}
-  Playertext: {fileID: 1232911173}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,8 +2125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 1147843673}
-  Playertext: {fileID: 1232911173}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,8 +2140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 743473983}
-  Playertext: {fileID: 1232911173}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,8 +2155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 11400000, guid: babf9056340aa2f43a3f35a14eec2759, type: 2}
-  currentText: {fileID: 59442013}
-  Playertext: {fileID: 1232911173}
+  text: {fileID: 0}
+  type: 0
 --- !u!114 &1085290828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3745,6 +3745,8 @@ MonoBehaviour:
   inputMoveLeft: 0
   inputMoveRight: 0
   inputPlaceBomb: 0
+  inputChangeInventoryUp: 0
+  inputChangeInventoryDown: 0
   inventoryPlayerOne: []
   havePlayerTwo: 0
   moveSpeedTwo: 0
@@ -3754,6 +3756,8 @@ MonoBehaviour:
   inputMoveLeftTwo: 0
   inputMoveRightTwo: 0
   inputPlaceBombTwo: 0
+  inputChangeInventoryUpTwo: 0
+  inputChangeInventoryDownTwo: 0
   inventoryPlayerTwo: []
   amountBombCanPlace: 0
   levelMap: 0
